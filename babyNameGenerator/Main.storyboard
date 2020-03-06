@@ -1,39 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ohR-sH-MqZ">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ohR-sH-MqZ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
-            <string>AvenirNext-DemiBold</string>
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--StartScreen-->
         <scene sceneID="jaF-PT-T9W">
             <objects>
                 <viewController title="StartScreen" id="VNY-J0-9aT" userLabel="StartScreen" customClass="StartScreen" customModule="babyNameGenerator" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wty-fT-Sbf"/>
-                        <viewControllerLayoutGuide type="bottom" id="o1h-L8-Xf7"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ldz-Lm-VCI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1R6-NB-EbU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HQ9-uK-FX2">
-                                        <rect key="frame" x="20" y="60" width="335" height="457"/>
+                                        <rect key="frame" x="20" y="60" width="335" height="437"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby Name Generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9P-Fc-PKi">
                                                 <rect key="frame" x="17.5" y="0.0" width="300" height="37"/>
@@ -45,7 +32,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-Ek-GB0">
-                                                <rect key="frame" x="114" y="160" width="107" height="87"/>
+                                                <rect key="frame" x="114" y="150" width="107" height="87"/>
                                                 <color key="backgroundColor" red="0.53725490200000003" green="0.81176470590000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87" id="5Od-3z-M0u"/>
@@ -59,11 +46,11 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="boyButtonPress:" destination="VNY-J0-9aT" eventType="touchUpInside" id="PlN-De-oGA"/>
-                                                    <segue destination="00m-T6-aZl" kind="show" id="gXn-6T-qYX"/>
+                                                    <segue destination="00m-T6-aZl" kind="show" identifier="boySegue" id="gXn-6T-qYX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-e9-gfh">
-                                                <rect key="frame" x="114" y="370" width="107" height="87"/>
+                                                <rect key="frame" x="114" y="350" width="107" height="87"/>
                                                 <color key="backgroundColor" red="1" green="0.71372549019999998" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="0jE-aS-mgo"/>
@@ -77,7 +64,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="girlButtonPress:" destination="VNY-J0-9aT" eventType="touchUpInside" id="ji6-Kv-gY9"/>
-                                                    <segue destination="UWD-Dy-P5b" kind="show" id="6lh-dF-BzR"/>
+                                                    <segue destination="UWD-Dy-P5b" kind="show" identifier="girlSegue" id="6lh-dF-BzR"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -95,12 +82,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1R6-NB-EbU" firstAttribute="leading" secondItem="Ldz-Lm-VCI" secondAttribute="leading" id="Q9P-8u-DLW"/>
-                            <constraint firstAttribute="trailing" secondItem="1R6-NB-EbU" secondAttribute="trailing" id="chk-Ze-Wz6"/>
+                            <constraint firstItem="1R6-NB-EbU" firstAttribute="leading" secondItem="353-PG-Kaf" secondAttribute="leading" id="Q9P-8u-DLW"/>
+                            <constraint firstItem="353-PG-Kaf" firstAttribute="trailing" secondItem="1R6-NB-EbU" secondAttribute="trailing" id="chk-Ze-Wz6"/>
                             <constraint firstItem="1R6-NB-EbU" firstAttribute="top" secondItem="Ldz-Lm-VCI" secondAttribute="top" id="hvJ-dQ-I2M"/>
-                            <constraint firstItem="o1h-L8-Xf7" firstAttribute="top" secondItem="1R6-NB-EbU" secondAttribute="bottom" id="leY-IL-dKp"/>
+                            <constraint firstItem="353-PG-Kaf" firstAttribute="bottom" secondItem="1R6-NB-EbU" secondAttribute="bottom" id="leY-IL-dKp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Mbd-b5-jzm"/>
+                        <viewLayoutGuide key="safeArea" id="353-PG-Kaf"/>
                     </view>
                     <navigationItem key="navigationItem" title="Baby Name Generator" id="9Yj-0w-heq">
                         <barButtonItem key="backBarButtonItem" title="Back" id="k8r-68-yif"/>
@@ -118,19 +105,15 @@
         <scene sceneID="2iq-1M-GZ2">
             <objects>
                 <viewController id="00m-T6-aZl" userLabel="BoyScreen" customClass="BoyScreen" customModule="babyNameGenerator" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PtI-4Q-HbI"/>
-                        <viewControllerLayoutGuide type="bottom" id="huH-Gz-9qT"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0BY-f2-ZIn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUK-OQ-xHL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HeT-tb-xfT">
-                                        <rect key="frame" x="38" y="262" width="300" height="143"/>
+                                        <rect key="frame" x="37.5" y="252" width="300" height="143"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Uih-Bk-dLP">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="143"/>
@@ -181,11 +164,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BUK-OQ-xHL" firstAttribute="top" secondItem="0BY-f2-ZIn" secondAttribute="top" id="4N2-Yd-gcW"/>
-                            <constraint firstItem="BUK-OQ-xHL" firstAttribute="leading" secondItem="0BY-f2-ZIn" secondAttribute="leading" id="5o1-ex-FWy"/>
-                            <constraint firstAttribute="trailing" secondItem="BUK-OQ-xHL" secondAttribute="trailing" id="ASf-QW-sgv"/>
-                            <constraint firstItem="huH-Gz-9qT" firstAttribute="top" secondItem="BUK-OQ-xHL" secondAttribute="bottom" id="tMI-Ux-KWZ"/>
+                            <constraint firstItem="BUK-OQ-xHL" firstAttribute="leading" secondItem="ad5-dT-V06" secondAttribute="leading" id="5o1-ex-FWy"/>
+                            <constraint firstItem="ad5-dT-V06" firstAttribute="trailing" secondItem="BUK-OQ-xHL" secondAttribute="trailing" id="ASf-QW-sgv"/>
+                            <constraint firstItem="ad5-dT-V06" firstAttribute="bottom" secondItem="BUK-OQ-xHL" secondAttribute="bottom" id="R0q-8c-L6S"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="sbU-Al-U5Z"/>
+                        <viewLayoutGuide key="safeArea" id="ad5-dT-V06"/>
                     </view>
                     <navigationItem key="navigationItem" title="Boy Names" id="ehV-te-0nE">
                         <barButtonItem key="backBarButtonItem" title="Back" id="l8d-Cj-jYZ"/>
@@ -203,19 +186,15 @@
         <scene sceneID="cdX-RS-Jsc">
             <objects>
                 <viewController id="UWD-Dy-P5b" userLabel="GirlScreen" customClass="GirlScreen" customModule="babyNameGenerator" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yEF-c2-Om4"/>
-                        <viewControllerLayoutGuide type="bottom" id="8xg-te-9SG"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cpb-lm-kT2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baj-Fg-9HD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-3Q-tQg">
-                                        <rect key="frame" x="38" y="262" width="300" height="143"/>
+                                        <rect key="frame" x="37.5" y="252" width="300" height="143"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M42-dZ-i7G">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
@@ -255,12 +234,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="baj-Fg-9HD" firstAttribute="leading" secondItem="cpb-lm-kT2" secondAttribute="leading" id="4Kz-uA-i58"/>
-                            <constraint firstAttribute="trailing" secondItem="baj-Fg-9HD" secondAttribute="trailing" id="WPH-ou-3aV"/>
+                            <constraint firstItem="baj-Fg-9HD" firstAttribute="leading" secondItem="csa-y8-h8M" secondAttribute="leading" id="4Kz-uA-i58"/>
+                            <constraint firstItem="csa-y8-h8M" firstAttribute="trailing" secondItem="baj-Fg-9HD" secondAttribute="trailing" id="WPH-ou-3aV"/>
                             <constraint firstItem="baj-Fg-9HD" firstAttribute="top" secondItem="cpb-lm-kT2" secondAttribute="top" id="cm3-Is-KLP"/>
-                            <constraint firstItem="8xg-te-9SG" firstAttribute="top" secondItem="baj-Fg-9HD" secondAttribute="bottom" id="hg9-L5-x48"/>
+                            <constraint firstItem="csa-y8-h8M" firstAttribute="bottom" secondItem="baj-Fg-9HD" secondAttribute="bottom" id="hg9-L5-x48"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PlW-us-Xvr"/>
+                        <viewLayoutGuide key="safeArea" id="csa-y8-h8M"/>
                     </view>
                     <navigationItem key="navigationItem" title="Girl Names" id="NPZ-qP-E8l">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xwM-Rr-NmI"/>
@@ -280,12 +259,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ohR-sH-MqZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="orM-6n-Fd7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="VNY-J0-9aT" kind="show" id="vcr-vL-JRR"/>
+                        <segue destination="VNY-J0-9aT" kind="show" identifier="navigationSegue" id="vcr-vL-JRR"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHz-eN-tDV" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,6 @@
 		C730B6261F888672007A298E /* GirlScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C730B6251F888672007A298E /* GirlScreen.swift */; };
 		C74DF4691F96A31D0008CBF6 /* boyNameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74DF4681F96A31D0008CBF6 /* boyNameList.swift */; };
 		C74DF46B1F96A3310008CBF6 /* girlNameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74DF46A1F96A3310008CBF6 /* girlNameList.swift */; };
-		C74DF46D1F96A3470008CBF6 /* shuffleArrayFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74DF46C1F96A3470008CBF6 /* shuffleArrayFunc.swift */; };
 		C756C4331F8430E100AE87A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C756C4321F8430E100AE87A5 /* AppDelegate.swift */; };
 		C756C4351F8430E100AE87A5 /* StartScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C756C4341F8430E100AE87A5 /* StartScreen.swift */; };
 		C756C43A1F8430E100AE87A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C756C4391F8430E100AE87A5 /* Assets.xcassets */; };
@@ -57,7 +56,6 @@
 		C730B6251F888672007A298E /* GirlScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlScreen.swift; sourceTree = "<group>"; };
 		C74DF4681F96A31D0008CBF6 /* boyNameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boyNameList.swift; sourceTree = "<group>"; };
 		C74DF46A1F96A3310008CBF6 /* girlNameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = girlNameList.swift; sourceTree = "<group>"; };
-		C74DF46C1F96A3470008CBF6 /* shuffleArrayFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shuffleArrayFunc.swift; sourceTree = "<group>"; };
 		C756C42F1F8430E100AE87A5 /* babyNameGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = babyNameGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C756C4321F8430E100AE87A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C756C4341F8430E100AE87A5 /* StartScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreen.swift; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				C730B6251F888672007A298E /* GirlScreen.swift */,
 				C74DF4681F96A31D0008CBF6 /* boyNameList.swift */,
 				C74DF46A1F96A3310008CBF6 /* girlNameList.swift */,
-				C74DF46C1F96A3470008CBF6 /* shuffleArrayFunc.swift */,
 				C7DA6FD41FB15DC600DB3D6C /* Main.storyboard */,
 				C756C43B1F8430E100AE87A5 /* LaunchScreen.storyboard */,
 				C756C4391F8430E100AE87A5 /* Assets.xcassets */,
@@ -219,13 +216,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "James Jensen";
 				TargetAttributes = {
 					C756C42E1F8430E000AE87A5 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 3UDVHUQG9F;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -235,13 +232,13 @@
 					};
 					C756C4421F8430E100AE87A5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C756C42E1F8430E000AE87A5;
 					};
 					C756C44D1F8430E100AE87A5 = {
 						CreatedOnToolsVersion = 8.3.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C756C42E1F8430E000AE87A5;
 					};
@@ -249,10 +246,9 @@
 			};
 			buildConfigurationList = C756C42A1F8430E000AE87A5 /* Build configuration list for PBXProject "babyNameGenerator" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -301,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C730B6241F8885EA007A298E /* BoyScreen.swift in Sources */,
-				C74DF46D1F96A3470008CBF6 /* shuffleArrayFunc.swift in Sources */,
 				C730B6261F888672007A298E /* GirlScreen.swift in Sources */,
 				C756C4351F8430E100AE87A5 /* StartScreen.swift in Sources */,
 				C74DF46B1F96A3310008CBF6 /* girlNameList.swift in Sources */,
@@ -357,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -367,6 +363,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -374,6 +371,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -414,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -424,6 +423,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -431,6 +431,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -470,14 +471,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UDVHUQG9F;
 				INFOPLIST_FILE = babyNameGenerator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JamesJensen.baby.name.generator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -491,14 +492,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UDVHUQG9F;
 				INFOPLIST_FILE = babyNameGenerator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JamesJensen.baby.name.generator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -512,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-01-Create.babyNameGeneratorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/babyNameGenerator.app/babyNameGenerator";
 			};
 			name = Debug;
@@ -527,7 +528,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-01-Create.babyNameGeneratorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/babyNameGenerator.app/babyNameGenerator";
 			};
 			name = Release;
@@ -541,7 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-01-Create.babyNameGeneratorUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = babyNameGenerator;
 			};
 			name = Debug;
@@ -555,7 +556,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-01-Create.babyNameGeneratorUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = babyNameGenerator;
 			};
 			name = Release;
