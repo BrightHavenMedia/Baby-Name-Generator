@@ -67,6 +67,7 @@ class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         dateFieldPicker.text = listOfYears[row]
         dateFieldPicker.textColor = UIColor.black
+        dateFieldPicker.font = UIFont.boldSystemFont(ofSize: 18)
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
