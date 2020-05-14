@@ -25,6 +25,11 @@ class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @IBOutlet weak var girlButton: UIButton!
     @IBOutlet weak var dateFieldPicker: UITextField!
     
+    @IBOutlet weak var showFavoritesLook: UIBarButtonItem!
+    
+    @IBAction func showFavorites(_ sender: Any) {
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

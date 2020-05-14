@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuX-Fp-gVR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuX-Fp-gVR">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,6 +106,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Baby Name Generator" id="9Yj-0w-heq">
                         <barButtonItem key="backBarButtonItem" title="Back" id="k8r-68-yif"/>
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="hsb-Rb-2tL">
+                            <connections>
+                                <action selector="showFavorites:" destination="VNY-J0-9aT" id="gBo-Dl-N2d"/>
+                                <segue destination="Cm6-2a-HbY" kind="show" id="yxD-EM-iPF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="boyButton" destination="oYc-Ek-GB0" id="Q9t-pI-eXd"/>
@@ -128,11 +134,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUK-OQ-xHL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HeT-tb-xfT">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="nN1-1X-HXI">
                                         <rect key="frame" x="37.5" y="262" width="300" height="143"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Uih-Bk-dLP">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="143"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-oD-Z0e">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-Zg-Cny">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
@@ -145,35 +151,30 @@
                                                         <color key="textColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-VE-8Ab" userLabel="boyGenerate">
-                                                        <rect key="frame" x="96.5" y="56" width="107" height="87"/>
-                                                        <color key="backgroundColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="nlW-uz-mSw"/>
-                                                            <constraint firstAttribute="height" constant="87" id="vdX-uu-3dn"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                                        <state key="normal" title="Generate">
-                                                            <color key="titleColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="boyGeneratePress:" destination="00m-T6-aZl" eventType="touchUpInside" id="MCQ-QP-Rbm"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-VE-8Ab" userLabel="boyGenerate">
+                                                <rect key="frame" x="96.5" y="56" width="107" height="87"/>
+                                                <color key="backgroundColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="nlW-uz-mSw"/>
+                                                    <constraint firstAttribute="height" constant="87" id="vdX-uu-3dn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Generate">
+                                                    <color key="titleColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="boyGeneratePress:" destination="00m-T6-aZl" eventType="touchUpInside" id="MCQ-QP-Rbm"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="Uih-Bk-dLP" firstAttribute="centerY" secondItem="HeT-tb-xfT" secondAttribute="centerY" id="ROW-eZ-pML"/>
-                                            <constraint firstItem="Uih-Bk-dLP" firstAttribute="centerX" secondItem="HeT-tb-xfT" secondAttribute="centerX" id="X71-m1-zT6"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.53725490200000003" green="0.81176470590000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="HeT-tb-xfT" firstAttribute="centerX" secondItem="BUK-OQ-xHL" secondAttribute="centerX" id="HVK-xT-G4w"/>
-                                    <constraint firstItem="HeT-tb-xfT" firstAttribute="centerY" secondItem="BUK-OQ-xHL" secondAttribute="centerY" id="bjr-q9-Vcr"/>
-                                    <constraint firstItem="HeT-tb-xfT" firstAttribute="centerY" secondItem="BUK-OQ-xHL" secondAttribute="centerY" id="jZc-Pw-uwv"/>
+                                    <constraint firstItem="nN1-1X-HXI" firstAttribute="centerY" secondItem="BUK-OQ-xHL" secondAttribute="centerY" id="Qye-wn-dTF"/>
+                                    <constraint firstItem="nN1-1X-HXI" firstAttribute="centerX" secondItem="BUK-OQ-xHL" secondAttribute="centerX" id="wx1-Ia-t4T"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -188,6 +189,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Boy Names" id="ehV-te-0nE">
                         <barButtonItem key="backBarButtonItem" title="Back" id="l8d-Cj-jYZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="YMb-Y9-meC">
+                            <connections>
+                                <action selector="showFavorites:" destination="00m-T6-aZl" id="elS-uN-CkX"/>
+                                <segue destination="Cm6-2a-HbY" kind="show" id="lny-gl-rfg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="boyGenerate" destination="O8F-VE-8Ab" id="UQB-HL-lfU"/>
@@ -209,20 +216,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baj-Fg-9HD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="WLH-3Q-tQg">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="VaG-hp-4Jj">
                                         <rect key="frame" x="37.5" y="262" width="300" height="143"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M42-dZ-i7G">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="15P-wE-9qm">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
-                                                <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="707-2e-WPy"/>
-                                                    <constraint firstAttribute="width" constant="300" id="gBX-Sf-Hmd"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
-                                                <color key="textColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M42-dZ-i7G">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                                        <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="707-2e-WPy"/>
+                                                            <constraint firstAttribute="width" constant="300" id="gBX-Sf-Hmd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                                                        <color key="textColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnE-O3-0wC">
                                                 <rect key="frame" x="96.5" y="56" width="107" height="87"/>
                                                 <color key="backgroundColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,8 +255,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.71372549019999998" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="WLH-3Q-tQg" firstAttribute="centerX" secondItem="baj-Fg-9HD" secondAttribute="centerX" id="tRt-oh-J8s"/>
-                                    <constraint firstItem="WLH-3Q-tQg" firstAttribute="centerY" secondItem="baj-Fg-9HD" secondAttribute="centerY" id="w9v-e0-qiq"/>
+                                    <constraint firstItem="VaG-hp-4Jj" firstAttribute="centerX" secondItem="baj-Fg-9HD" secondAttribute="centerX" id="9WM-FQ-Nuv"/>
+                                    <constraint firstItem="VaG-hp-4Jj" firstAttribute="centerY" secondItem="baj-Fg-9HD" secondAttribute="centerY" id="XXJ-b1-q0r"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -259,6 +271,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Girl Names" id="NPZ-qP-E8l">
                         <barButtonItem key="backBarButtonItem" title="Back" id="xwM-Rr-NmI"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Favorites" id="9bx-bN-cMD">
+                                <connections>
+                                    <action selector="showFavorites:" destination="UWD-Dy-P5b" id="FpN-zg-AgY"/>
+                                    <segue destination="Cm6-2a-HbY" kind="show" id="2hR-7d-Sjc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="gdI-yH-9FV"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="girlGenerate" destination="gnE-O3-0wC" id="csl-0r-O1O"/>
@@ -269,5 +290,37 @@
             </objects>
             <point key="canvasLocation" x="3396" y="-224.4377811094453"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="dyR-MB-QfL">
+            <objects>
+                <tableViewController id="Cm6-2a-HbY" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2s1-3c-Ahc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VOO-qk-DgI">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VOO-qk-DgI" id="sJg-AR-Pjy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cm6-2a-HbY" id="HCn-Cf-gXX"/>
+                            <outlet property="delegate" destination="Cm6-2a-HbY" id="By5-cz-qNF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="cOl-RB-reb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBl-UJ-mSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4563" y="161"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2hR-7d-Sjc"/>
+    </inferredMetricsTieBreakers>
 </document>

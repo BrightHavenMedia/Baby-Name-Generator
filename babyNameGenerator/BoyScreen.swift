@@ -20,6 +20,15 @@ class BoyScreen: UIViewController {
    
     @IBOutlet weak var boyGenerate: UIButton!
     
+   
+    @IBAction func addBoyFavorites(_ sender: Any) {
+    }
+    
+    
+    @IBAction func showFavorites(_ sender: Any) {
+    }
+    
+    
     @IBAction func boyGeneratePress(_ sender: Any) {
         
         if currentElement < boyNameList.count {

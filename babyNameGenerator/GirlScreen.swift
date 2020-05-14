@@ -16,6 +16,15 @@ class GirlScreen: UIViewController {
     @IBOutlet weak var girlNameLabel: UILabel!
     
     @IBOutlet weak var girlGenerate: UIButton!
+    
+    @IBAction func addGirlFavorites(_ sender: Any) {
+    }
+    
+    
+    @IBAction func showFavorites(_ sender: Any) {
+    }
+    
+    
   
     @IBAction func girlGeneratePress(_ sender: Any) {
         
