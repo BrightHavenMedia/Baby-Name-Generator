@@ -19,9 +19,10 @@ class GirlScreen: UIViewController {
     
     @IBOutlet weak var girlAddStyling: UIButton!
     
-    @IBAction func girlAddFavorite(_ sender: Any) {
+    
+    @IBAction func girlAddFavorite(_ sender: UIButton) {
         
-        
+        sender.isSelected.toggle()
         
     }
     

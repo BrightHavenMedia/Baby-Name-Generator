@@ -22,13 +22,12 @@ class BoyScreen: UIViewController {
     
     @IBOutlet weak var boyAddStyling: UIButton!
     
-   
-    @IBAction func boyAddFavorite(_ sender: Any) {
+    
+    @IBAction func boyAddFavorite(_ sender: UIButton) {
         
-//        boyAddStyling.setImage(UIImage(named: "heart.fill"), for: .normal) Code not working to change button picture on press.
+        sender.isSelected.toggle()
         
     }
-    
     
     
     @IBAction func showFavorites(_ sender: Any) {
