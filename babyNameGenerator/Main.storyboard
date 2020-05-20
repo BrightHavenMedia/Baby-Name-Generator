@@ -313,7 +313,7 @@
         <!--Favorite Names-->
         <scene sceneID="dyR-MB-QfL">
             <objects>
-                <tableViewController id="Cm6-2a-HbY" sceneMemberID="viewController">
+                <tableViewController id="Cm6-2a-HbY" customClass="FavoriteNames" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2s1-3c-Ahc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +341,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lny-gl-rfg"/>
+        <segue reference="2hR-7d-Sjc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

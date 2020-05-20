@@ -20,6 +20,7 @@ class GirlScreen: UIViewController {
     @IBOutlet weak var girlAddStyling: UIButton!
     
     
+    
     @IBAction func girlAddFavorite(_ sender: UIButton) {
         
         sender.isSelected.toggle()
@@ -32,7 +33,9 @@ class GirlScreen: UIViewController {
     
     
   
+    @available(iOS 13.0, *)
     @IBAction func girlGeneratePress(_ sender: Any) {
+        
         
         if currentElement < girlNameList.count {
             girlNameLabel.text = girlNameList[currentElement]
