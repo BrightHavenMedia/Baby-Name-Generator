@@ -17,7 +17,8 @@
 		C756C43D1F8430E100AE87A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C756C43B1F8430E100AE87A5 /* LaunchScreen.storyboard */; };
 		C756C4481F8430E100AE87A5 /* babyNameGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C756C4471F8430E100AE87A5 /* babyNameGeneratorTests.swift */; };
 		C756C4531F8430E100AE87A5 /* babyNameGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C756C4521F8430E100AE87A5 /* babyNameGeneratorUITests.swift */; };
-		C78A29C22474DBF200B8E05E /* FavoriteNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A29C12474DBF200B8E05E /* FavoriteNames.swift */; };
+		C78A2A022478762E00B8E05E /* babyNameGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C78A2A002478762E00B8E05E /* babyNameGenerator.xcdatamodeld */; };
+		C78A2A0624787C5600B8E05E /* FavoriteNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A2A0524787C5600B8E05E /* FavoriteNames.swift */; };
 		C7DA6FD51FB15DC600DB3D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DA6FD41FB15DC600DB3D6C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +70,8 @@
 		C756C44E1F8430E100AE87A5 /* babyNameGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = babyNameGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C756C4521F8430E100AE87A5 /* babyNameGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = babyNameGeneratorUITests.swift; sourceTree = "<group>"; };
 		C756C4541F8430E100AE87A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C78A29C12474DBF200B8E05E /* FavoriteNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNames.swift; sourceTree = "<group>"; };
+		C78A2A012478762E00B8E05E /* babyNameGenerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = babyNameGenerator.xcdatamodel; sourceTree = "<group>"; };
+		C78A2A0524787C5600B8E05E /* FavoriteNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteNames.swift; path = ../FavoriteNames.swift; sourceTree = "<group>"; };
 		C7DA6FD41FB15DC600DB3D6C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,9 +124,10 @@
 			isa = PBXGroup;
 			children = (
 				C721A6021FCCFD61000019BF /* babyNameGenerator.entitlements */,
+				C78A2A002478762E00B8E05E /* babyNameGenerator.xcdatamodeld */,
 				C756C4321F8430E100AE87A5 /* AppDelegate.swift */,
 				C756C4341F8430E100AE87A5 /* StartScreen.swift */,
-				C78A29C12474DBF200B8E05E /* FavoriteNames.swift */,
+				C78A2A0524787C5600B8E05E /* FavoriteNames.swift */,
 				C730B6231F8885EA007A298E /* BoyScreen.swift */,
 				C730B6251F888672007A298E /* GirlScreen.swift */,
 				C74DF4681F96A31D0008CBF6 /* boyNameList.swift */,
@@ -299,10 +302,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C78A29C22474DBF200B8E05E /* FavoriteNames.swift in Sources */,
 				C730B6241F8885EA007A298E /* BoyScreen.swift in Sources */,
 				C730B6261F888672007A298E /* GirlScreen.swift in Sources */,
+				C78A2A0624787C5600B8E05E /* FavoriteNames.swift in Sources */,
 				C756C4351F8430E100AE87A5 /* StartScreen.swift in Sources */,
+				C78A2A022478762E00B8E05E /* babyNameGenerator.xcdatamodeld in Sources */,
 				C74DF46B1F96A3310008CBF6 /* girlNameList.swift in Sources */,
 				C756C4331F8430E100AE87A5 /* AppDelegate.swift in Sources */,
 				C74DF4691F96A31D0008CBF6 /* boyNameList.swift in Sources */,
@@ -475,7 +479,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UDVHUQG9F;
 				INFOPLIST_FILE = babyNameGenerator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JamesJensen.baby.name.generator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,7 +500,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UDVHUQG9F;
 				INFOPLIST_FILE = babyNameGenerator/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JamesJensen.baby.name.generator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,6 +609,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C78A2A002478762E00B8E05E /* babyNameGenerator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C78A2A012478762E00B8E05E /* babyNameGenerator.xcdatamodel */,
+			);
+			currentVersion = C78A2A012478762E00B8E05E /* babyNameGenerator.xcdatamodel */;
+			path = babyNameGenerator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C756C4271F8430E000AE87A5 /* Project object */;
 }
