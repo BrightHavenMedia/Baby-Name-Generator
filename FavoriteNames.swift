@@ -12,8 +12,12 @@ import UIKit
 
 class FavoriteNames: UITableViewController {
     
-    let itemArray = ["Mike", "Jane", "Henry"]
     
+    
+    var itemArray = [] as [String]
+    
+    
+//    What I need is for an array on BoyScreen and an array on GirlScreen to feed into item array. Every time the heart is pressed it will trigger a segue with the data and append to itemArray.
     
     
     
@@ -47,6 +51,30 @@ class FavoriteNames: UITableViewController {
         
     }
     
+//    add new name button: Adds new name to favorite name list
+    @IBAction func addNameButton(_ sender: UIBarButtonItem) {
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New Baby Name", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Name", style: .default) { (action) in
+            
+            self.itemArray.append(textField.text!)
+            
+            self.tableView.reloadData()
+        }
+        
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Create New Baby Name"
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
     
     
     

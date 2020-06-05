@@ -11,7 +11,7 @@ import UIKit
 
 class GirlScreen: UIViewController {
     
-    
+    var girlFavoriteName : String = ""
     
     var currentElement = 0
     
@@ -24,8 +24,9 @@ class GirlScreen: UIViewController {
     
     
     @IBAction func girlAddFavorite(_ sender: UIButton) {
-        
+//        need error handling here instead of force unwrapping
         sender.isSelected.toggle()
+       
         
     }
     

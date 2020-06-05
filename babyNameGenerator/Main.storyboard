@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yuX-Fp-gVR">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -333,7 +332,13 @@
                             <outlet property="delegate" destination="Cm6-2a-HbY" id="By5-cz-qNF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favorite Names" id="cOl-RB-reb"/>
+                    <navigationItem key="navigationItem" title="Favorite Names" id="cOl-RB-reb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q27-kV-p2B">
+                            <connections>
+                                <action selector="addNameButton:" destination="Cm6-2a-HbY" id="Wwr-Rs-cnA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBl-UJ-mSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

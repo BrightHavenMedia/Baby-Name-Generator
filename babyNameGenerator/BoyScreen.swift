@@ -14,6 +14,7 @@ class BoyScreen: UIViewController {
     
     var currentElement = 0
     
+    public var boyFavoriteNames = [""]
     
     
     @IBOutlet weak var boyScreenLabel: UILabel!
@@ -26,7 +27,9 @@ class BoyScreen: UIViewController {
     @IBAction func boyAddFavorite(_ sender: UIButton) {
         
         sender.isSelected.toggle()
-        
+//        figure out why I need to force unwrap here with adding this name to the array.
+        boyFavoriteNames.append((boyScreenLabel?.text)!)
+    
     }
     
     
@@ -35,6 +38,7 @@ class BoyScreen: UIViewController {
     
     
     @IBAction func boyGeneratePress(_ sender: Any) {
+        
         
         if currentElement < boyNameList.count {
             boyScreenLabel.text = boyNameList[currentElement]
