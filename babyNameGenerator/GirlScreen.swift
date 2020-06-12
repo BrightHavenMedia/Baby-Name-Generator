@@ -8,8 +8,13 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class GirlScreen: UIViewController {
+    
+    var itemArray = [Name]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var girlFavoriteName : String = ""
     
@@ -26,6 +31,14 @@ class GirlScreen: UIViewController {
     @IBAction func girlAddFavorite(_ sender: UIButton) {
 //        need error handling here instead of force unwrapping
         sender.isSelected.toggle()
+        
+        let newName = Name(context: self.context)
+        
+        newName.babyName = girlNameLabel.text!
+        
+        self.itemArray.append(newName)
+        
+        self.saveItems()
        
         
     }
@@ -59,6 +72,30 @@ class GirlScreen: UIViewController {
         girlGenerate.clipsToBounds = true
         
         
+    }
+    
+    func saveItems() {
+            
+        do {
+            try context.save()
+                
+        } catch {
+            print("Error saving context \(error)")
+                
+        }
+
+    }
+        
+    func loadItems() {
+        let request: NSFetchRequest<Name> = Name.fetchRequest()
+        
+        do {
+        itemArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+            
+        }
+
     }
     
 }

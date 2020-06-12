@@ -8,11 +8,14 @@
 
 import Foundation
 import UIKit
-
+import CoreData
 
 class BoyScreen: UIViewController {
     
     var currentElement = 0
+    var itemArray = [Name]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     public var boyFavoriteNames = [""]
     
@@ -28,7 +31,13 @@ class BoyScreen: UIViewController {
         
         sender.isSelected.toggle()
 //        figure out why I need to force unwrap here with adding this name to the array.
-        boyFavoriteNames.append((boyScreenLabel?.text)!)
+        let newName = Name(context: self.context)
+        
+        newName.babyName = boyScreenLabel.text!
+        
+        self.itemArray.append(newName)
+        
+        self.saveItems()
     
     }
     
@@ -60,6 +69,30 @@ class BoyScreen: UIViewController {
         boyGenerate.clipsToBounds = true
         
         
+    }
+    
+    func saveItems() {
+            
+        do {
+            try context.save()
+                
+        } catch {
+            print("Error saving context \(error)")
+                
+        }
+
+    }
+        
+    func loadItems() {
+        let request: NSFetchRequest<Name> = Name.fetchRequest()
+        
+        do {
+        itemArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+            
+        }
+
     }
     
 }

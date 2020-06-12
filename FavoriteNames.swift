@@ -8,17 +8,16 @@
 
 import Foundation
 import UIKit
-
+import CoreData
 
 class FavoriteNames: UITableViewController {
     
+    var itemArray = [Name]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    
-    var itemArray = [] as [String]
-    
-    
-//    What I need is for an array on BoyScreen and an array on GirlScreen to feed into item array. Every time the heart is pressed it will trigger a segue with the data and append to itemArray.
-    
+    override func viewDidLoad() {
+        loadItems()
+    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,7 +29,9 @@ class FavoriteNames: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BabyNameCell", for: indexPath)
         
-        cell.textLabel?.text = itemArray[indexPath.row]
+        let item = itemArray[indexPath.row]
+        
+        cell.textLabel?.text = item.babyName
         
         return cell
     }
@@ -40,15 +41,14 @@ class FavoriteNames: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemArray[indexPath.row])
         
-//        add checkmark next to table cells Leaving this in because I might want to rank names etc.
-        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        } else {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        }
+////        add checkmark next to table cells Leaving this in because I might want to rank names etc.
+//        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
+//            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+//        } else {
+//            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+//        }
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
     }
     
 //    add new name button: Adds new name to favorite name list
@@ -60,9 +60,13 @@ class FavoriteNames: UITableViewController {
         
         let action = UIAlertAction(title: "Add Name", style: .default) { (action) in
             
-            self.itemArray.append(textField.text!)
+            let newName = Name(context: self.context)
             
-            self.tableView.reloadData()
+            newName.babyName = textField.text!
+            
+            self.itemArray.append(newName)
+            
+            self.saveItems()
         }
         
         alert.addTextField { (alertTextField) in
@@ -75,6 +79,32 @@ class FavoriteNames: UITableViewController {
         present(alert, animated: true, completion: nil)
         
     }
+        
+    func saveItems() {
+            
+        do {
+            try context.save()
+                
+        } catch {
+            print("Error saving context \(error)")
+                
+        }
+        self.tableView.reloadData()
+    }
+        
+    func loadItems() {
+        let request: NSFetchRequest<Name> = Name.fetchRequest()
+        
+        do {
+        itemArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+            
+        }
+
+    }
+    
+}
     
     
     
@@ -86,6 +116,5 @@ class FavoriteNames: UITableViewController {
 
     
     
-}
 
 
