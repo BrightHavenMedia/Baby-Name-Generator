@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var listOfYears = ["1880", "1881", "1882", "1883"]
-    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var itemArray = [Name]()
 
     
     
@@ -35,6 +37,8 @@ class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadItems()
         
         let datePicker = UIPickerView()
         
@@ -99,6 +103,18 @@ class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
     @objc func doneButtonAction(){
         dateFieldPicker.resignFirstResponder()
     
+    }
+    
+    func loadItems() {
+        let request: NSFetchRequest<Name> = Name.fetchRequest()
+        
+        do {
+        itemArray = try context.fetch(request)
+        } catch {
+            print("Error fetching data from context \(error)")
+            
+        }
+
     }
     
 }

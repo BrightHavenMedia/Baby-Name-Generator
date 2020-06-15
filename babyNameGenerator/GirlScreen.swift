@@ -26,7 +26,20 @@ class GirlScreen: UIViewController {
     
     @IBOutlet weak var girlAddStyling: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        girlNameLabel.isEnabled = false
+        
+        if girlNameLabel.isEnabled == false {
+            girlAddStyling.isEnabled = false
+        }
+        
+        girlNameLabel.layer.cornerRadius = 10
+        girlNameLabel.clipsToBounds = true
+        girlGenerate.layer.cornerRadius = 20
+        girlGenerate.clipsToBounds = true
     
+    }
     
     @IBAction func girlAddFavorite(_ sender: UIButton) {
 //        need error handling here instead of force unwrapping
@@ -43,15 +56,10 @@ class GirlScreen: UIViewController {
         
     }
     
-    
-    @IBAction func showFavorites(_ sender: Any) {
-    }
-    
-    
-  
-    @available(iOS 13.0, *)
+
     @IBAction func girlGeneratePress(_ sender: Any) {
-        
+        girlNameLabel.isEnabled = true
+        girlAddStyling.isEnabled = true
         
         if currentElement < girlNameList.count {
             girlNameLabel.text = girlNameList[currentElement]
@@ -62,17 +70,7 @@ class GirlScreen: UIViewController {
             girlNameLabel.text = "Sorry Out of Names"
         }
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-        
-        girlNameLabel.layer.cornerRadius = 10
-        girlNameLabel.clipsToBounds = true
-        girlGenerate.layer.cornerRadius = 20
-        girlGenerate.clipsToBounds = true
-        
-        
-    }
+
     
     func saveItems() {
             

@@ -41,6 +41,7 @@ class FavoriteNames: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemArray[indexPath.row])
         
+        
 ////        add checkmark next to table cells Leaving this in because I might want to rank names etc.
 //        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
 //            tableView.cellForRow(at: indexPath)?.accessoryType = .none
@@ -101,7 +102,6 @@ class FavoriteNames: UITableViewController {
             print("Error fetching data from context \(error)")
             
         }
-
     }
     
 }

@@ -16,25 +16,32 @@ class BoyScreen: UIViewController {
     var itemArray = [Name]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    public var boyFavoriteNames = [""]
-    
-    
+
     @IBOutlet weak var boyScreenLabel: UILabel!
-   
     @IBOutlet weak var boyGenerate: UIButton!
-    
     @IBOutlet weak var boyAddStyling: UIButton!
     
+   override func viewDidLoad() {
+       super.viewDidLoad()
+       boyScreenLabel.isEnabled = false
+       
+       if boyScreenLabel.isEnabled == false {
+           boyAddStyling.isEnabled = false
+           
+       }
+       boyScreenLabel.layer.cornerRadius = 10
+       boyScreenLabel.clipsToBounds = true
+       boyGenerate.layer.cornerRadius = 20
+       boyGenerate.clipsToBounds = true
+    
+   }
     
     @IBAction func boyAddFavorite(_ sender: UIButton) {
         
         sender.isSelected.toggle()
-//        figure out why I need to force unwrap here with adding this name to the array.
+        
         let newName = Name(context: self.context)
-        
         newName.babyName = boyScreenLabel.text!
-        
         self.itemArray.append(newName)
         
         self.saveItems()
@@ -45,9 +52,10 @@ class BoyScreen: UIViewController {
     @IBAction func showFavorites(_ sender: Any) {
     }
     
-    
     @IBAction func boyGeneratePress(_ sender: Any) {
         
+        boyScreenLabel.isEnabled = true
+        boyAddStyling.isEnabled = true
         
         if currentElement < boyNameList.count {
             boyScreenLabel.text = boyNameList[currentElement]
@@ -59,17 +67,6 @@ class BoyScreen: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-            
-        boyScreenLabel.layer.cornerRadius = 10
-        boyScreenLabel.clipsToBounds = true
-        boyGenerate.layer.cornerRadius = 20
-        boyGenerate.clipsToBounds = true
-        
-        
-    }
     
     func saveItems() {
             
