@@ -60,6 +60,7 @@ class GirlScreen: UIViewController {
     @IBAction func girlGeneratePress(_ sender: Any) {
         girlNameLabel.isEnabled = true
         girlAddStyling.isEnabled = true
+        girlAddStyling.isSelected = false
         
         if currentElement < girlNameList.count {
             girlNameLabel.text = girlNameList[currentElement]

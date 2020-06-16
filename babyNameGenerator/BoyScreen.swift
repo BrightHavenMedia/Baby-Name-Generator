@@ -56,6 +56,7 @@ class BoyScreen: UIViewController {
         
         boyScreenLabel.isEnabled = true
         boyAddStyling.isEnabled = true
+        boyAddStyling.isSelected = false
         
         if currentElement < boyNameList.count {
             boyScreenLabel.text = boyNameList[currentElement]
