@@ -15,12 +15,15 @@ class FavoriteNames: UITableViewController {
     var itemArray = [Name]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    @IBOutlet weak var nameSearch: UISearchBar!
+    
     override func viewDidLoad() {
         loadItems()
         
     }
     
-    
+        
+//MARK: - TableView Delegate Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return itemArray.count
@@ -37,25 +40,14 @@ class FavoriteNames: UITableViewController {
         return cell
     }
     
-//MARK - TableView Delegate Methods
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemArray[indexPath.row])
-        
-         //  context.delete(itemArray[indexPath.row]) to delete you need to do context.delete, then specify what you want to delete. Then you need to context.save then load.
-        
-        //    itemArray.remove(at: indexPath.row
-////        add checkmark next to table cells Leaving this in because I might want to rank names etc.
-//        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
-//            tableView.cellForRow(at: indexPath)?.accessoryType = .none
-//        } else {
-//            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-//        }
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-//    add new name button: Adds new name to favorite name list
+//MARK: - Add Name UIAlert
+    
     @IBAction func addNameButton(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
@@ -83,6 +75,8 @@ class FavoriteNames: UITableViewController {
         present(alert, animated: true, completion: nil)
         
     }
+    
+//MARK: - Core Data Functions
         
     func saveItems() {
             
@@ -96,12 +90,11 @@ class FavoriteNames: UITableViewController {
         self.tableView.reloadData()
     }
         
-    func loadItems() {
+    func loadItems(with request: NSFetchRequest<Name> = Name.fetchRequest()) {
         let request: NSFetchRequest<Name> = Name.fetchRequest()
         
         do {
             itemArray = try context.fetch(request)
-            
             
         } catch {
             print("Error fetching data from context \(error)")
@@ -109,7 +102,40 @@ class FavoriteNames: UITableViewController {
         }
     }
     
+  
+    
 }
+//MARK: - Search Bar
+extension FavoriteNames: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        let request: NSFetchRequest<Name> = Name.fetchRequest()
+        
+        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", nameSearch.text!)
+        
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        
+        loadItems(with: request)
+        
+        tableView.reloadData()
+        
+      }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItems()
+            
+            DispatchQueue.main.async {
+                self.nameSearch.resignFirstResponder()
+                
+            }
+        }
+    }
+}
+
+
+
     
     
 

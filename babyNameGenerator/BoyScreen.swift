@@ -42,10 +42,14 @@ class BoyScreen: UIViewController {
         
         let newName = Name(context: self.context)
         newName.babyName = boyScreenLabel.text!
-        self.itemArray.append(newName)
+        
+        if boyAddStyling.isSelected == true {
+            self.itemArray.append(newName)
+        }else {
+            self.itemArray.removeLast()
+        }
         
         self.saveItems()
-    
     }
     
     
@@ -92,6 +96,12 @@ class BoyScreen: UIViewController {
             
         }
 
+    }
+    
+    func deleteItems() {
+        
+       
+        
     }
     
 }
