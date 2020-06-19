@@ -17,6 +17,7 @@ class FavoriteNames: UITableViewController {
     
     override func viewDidLoad() {
         loadItems()
+        
     }
     
     
@@ -41,7 +42,9 @@ class FavoriteNames: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(itemArray[indexPath.row])
         
+         //  context.delete(itemArray[indexPath.row]) to delete you need to do context.delete, then specify what you want to delete. Then you need to context.save then load.
         
+        //    itemArray.remove(at: indexPath.row
 ////        add checkmark next to table cells Leaving this in because I might want to rank names etc.
 //        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark {
 //            tableView.cellForRow(at: indexPath)?.accessoryType = .none
@@ -97,7 +100,9 @@ class FavoriteNames: UITableViewController {
         let request: NSFetchRequest<Name> = Name.fetchRequest()
         
         do {
-        itemArray = try context.fetch(request)
+            itemArray = try context.fetch(request)
+            
+            
         } catch {
             print("Error fetching data from context \(error)")
             
@@ -107,8 +112,8 @@ class FavoriteNames: UITableViewController {
 }
     
     
-    
-    
+
+
     
    
     
