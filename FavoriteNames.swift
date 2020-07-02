@@ -14,8 +14,8 @@ class FavoriteNames: UITableViewController {
     
     var itemArray = [Name]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
-    @IBOutlet weak var nameSearch: UISearchBar!
     
     override func viewDidLoad() {
         loadItems()
@@ -102,8 +102,6 @@ class FavoriteNames: UITableViewController {
         }
     }
     
-  
-    
 }
 //MARK: - Search Bar
 extension FavoriteNames: UISearchBarDelegate {
@@ -112,7 +110,7 @@ extension FavoriteNames: UISearchBarDelegate {
         
         let request: NSFetchRequest<Name> = Name.fetchRequest()
         
-        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", nameSearch.text!)
+        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
         
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
@@ -125,12 +123,17 @@ extension FavoriteNames: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text?.count == 0 {
             loadItems()
-            
+    
             DispatchQueue.main.async {
-                self.nameSearch.resignFirstResponder()
+                
+                searchBar.resignFirstResponder()
                 
             }
         }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
