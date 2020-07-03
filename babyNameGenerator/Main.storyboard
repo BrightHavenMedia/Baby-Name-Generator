@@ -154,6 +154,7 @@
                                                         <rect key="frame" x="275" y="0.0" width="20.5" height="35"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <state key="normal" image="heart" catalog="system"/>
+                                                        <state key="disabled" image="heart.fill" catalog="system"/>
                                                         <state key="selected" image="heart.fill" catalog="system"/>
                                                         <connections>
                                                             <action selector="boyAddFavorite:" destination="00m-T6-aZl" eventType="touchUpInside" id="jdE-so-SLq"/>
@@ -246,6 +247,7 @@
                                                         <rect key="frame" x="275" y="0.0" width="20.5" height="35"/>
                                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <state key="normal" image="heart" catalog="system"/>
+                                                        <state key="disabled" image="heart.fill" catalog="system"/>
                                                         <state key="selected" image="heart.fill" catalog="system"/>
                                                         <connections>
                                                             <action selector="girlAddFavorite:" destination="UWD-Dy-P5b" eventType="touchUpInside" id="4Jl-DV-XHx"/>
@@ -358,7 +360,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2hR-7d-Sjc"/>
+        <segue reference="lny-gl-rfg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
