@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 import CoreData
 
-class GirlScreen: UIViewController {
+class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var itemArray = [Name]()
-    
+    var listOfYears = ["1900", "1901", "1902"]
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -21,23 +21,44 @@ class GirlScreen: UIViewController {
     
     var currentElement = 0
     
+    @IBOutlet weak var girlYearPicker: UITextField!
+    
     @IBOutlet weak var girlNameLabel: UILabel!
     
     @IBOutlet weak var girlGenerate: UIButton!
     
     @IBOutlet weak var girlAddStyling: UIButton!
     
+// MARK: - View Did Load and Label Formatting
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let datePicker = UIPickerView()
+        
+        girlYearPicker.inputView = datePicker
+        datePicker.delegate = self
+        
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GirlScreen.dismissKeyboard))
+        
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
+        addDoneButtonOnKeyboard()
+    
         girlNameLabel.isEnabled = false
         girlAddStyling.isHidden = true
         
+        girlYearPicker.layer.cornerRadius = 10
+        girlYearPicker.clipsToBounds = true
+            
         girlNameLabel.layer.cornerRadius = 10
         girlNameLabel.clipsToBounds = true
         girlGenerate.layer.cornerRadius = 20
         girlGenerate.clipsToBounds = true
     
     }
+    
+// MARK: - Favorite Button and Favorite List
     
     @IBAction func girlAddFavorite(_ sender: UIButton) {
 
@@ -55,6 +76,8 @@ class GirlScreen: UIViewController {
         }
         saveItems()
     }
+    
+// MARK: - Generate Names
     
 
     @IBAction func girlGeneratePress(_ sender: Any) {
@@ -74,7 +97,52 @@ class GirlScreen: UIViewController {
         }
         
     }
+//    MARK: - Date Picker
+    @objc func dismissKeyboard() {
+        
+        view.endEditing(true)
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return listOfYears.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        girlYearPicker.text = listOfYears[row]
+        girlYearPicker.textColor = UIColor.black
+        girlYearPicker.font = UIFont.boldSystemFont(ofSize: 18)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return listOfYears[row]
+    }
+    
+    func addDoneButtonOnKeyboard(){
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        girlYearPicker.inputAccessoryView = doneToolbar
+        
+    }
+    
+    @objc func doneButtonAction(){
+        girlYearPicker.resignFirstResponder()
+    
+    }
 
+//    MARK: - Core Data
     
     func saveItems() {
             

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class StartScreen: UIViewController {
     
     var listOfYears = ["1880", "1881", "1882", "1883"]
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -40,19 +40,6 @@ class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
         loadItems()
         
-        let datePicker = UIPickerView()
-        
-        dateFieldPicker.inputView = datePicker
-        datePicker.delegate = self
-        
-        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(StartScreen.dismissKeyboard))
-        
-        view.addGestureRecognizer(tapGestureRecognizer)
-        
-        addDoneButtonOnKeyboard()
-        
-        
-        
         boyButton.layer.cornerRadius = 20
         boyButton.clipsToBounds = true
         girlButton.layer.cornerRadius = 20
@@ -61,51 +48,7 @@ class StartScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         
     }
     
-    
-    
-    @objc func dismissKeyboard() {
-        
-        view.endEditing(true)
-    }
-    
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return listOfYears.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        dateFieldPicker.text = listOfYears[row]
-        dateFieldPicker.textColor = UIColor.black
-        dateFieldPicker.font = UIFont.boldSystemFont(ofSize: 18)
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return listOfYears[row]
-    }
-    
-    func addDoneButtonOnKeyboard(){
-        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
-        doneToolbar.barStyle = .default
-        
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
-        
-        let items = [flexSpace, done]
-        doneToolbar.items = items
-        doneToolbar.sizeToFit()
-        
-        dateFieldPicker.inputAccessoryView = doneToolbar
-        
-    }
-    
-    @objc func doneButtonAction(){
-        dateFieldPicker.resignFirstResponder()
-    
-    }
+//    MARK: - CoreData Start Screen
     
     func loadItems() {
         let request: NSFetchRequest<Name> = Name.fetchRequest()

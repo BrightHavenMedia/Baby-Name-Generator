@@ -34,63 +34,52 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1R6-NB-EbU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="169" translatesAutoresizingMaskIntoConstraints="NO" id="qEI-Nd-Q1D">
-                                        <rect key="frame" x="46.5" y="188.5" width="282" height="290.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="DNq-Bf-7tl">
+                                        <rect key="frame" x="46.5" y="290" width="282" height="87"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Year For Names" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Pb-p9-oAL">
-                                                <rect key="frame" x="0.0" y="0.0" width="282" height="34.5"/>
-                                                <color key="textColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="DNq-Bf-7tl">
-                                                <rect key="frame" x="0.0" y="203.5" width="282" height="87"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-Ek-GB0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="87"/>
-                                                        <color key="backgroundColor" red="0.53725490200000003" green="0.81176470590000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87" id="5Od-3z-M0u"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="Vha-r4-DMV"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="cex-ne-0w6"/>
-                                                            <constraint firstAttribute="height" constant="87" id="xJp-qf-Qfn"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
-                                                        <state key="normal" title="Boy">
-                                                            <color key="titleColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="boyButtonPress:" destination="VNY-J0-9aT" eventType="touchUpInside" id="PlN-De-oGA"/>
-                                                            <segue destination="00m-T6-aZl" kind="show" identifier="boySegue" id="gXn-6T-qYX"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-e9-gfh">
-                                                        <rect key="frame" x="175" y="0.0" width="107" height="87"/>
-                                                        <color key="backgroundColor" red="1" green="0.71372549019999998" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="0jE-aS-mgo"/>
-                                                            <constraint firstAttribute="height" constant="87" id="Y3g-aR-zSJ"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87" id="gLF-Yz-9Qd"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="nAD-oC-3Rq"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
-                                                        <state key="normal" title="Girl">
-                                                            <color key="titleColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="girlButtonPress:" destination="VNY-J0-9aT" eventType="touchUpInside" id="ji6-Kv-gY9"/>
-                                                            <segue destination="UWD-Dy-P5b" kind="show" identifier="girlSegue" id="6lh-dF-BzR"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYc-Ek-GB0">
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="87"/>
+                                                <color key="backgroundColor" red="0.53725490200000003" green="0.81176470590000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87" id="5Od-3z-M0u"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="Vha-r4-DMV"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="cex-ne-0w6"/>
+                                                    <constraint firstAttribute="height" constant="87" id="xJp-qf-Qfn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                                <state key="normal" title="Boy">
+                                                    <color key="titleColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="boyButtonPress:" destination="VNY-J0-9aT" eventType="touchUpInside" id="PlN-De-oGA"/>
+                                                    <segue destination="00m-T6-aZl" kind="show" identifier="boySegue" id="gXn-6T-qYX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgu-e9-gfh">
+                                                <rect key="frame" x="175" y="0.0" width="107" height="87"/>
+                                                <color key="backgroundColor" red="1" green="0.71372549019999998" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="0jE-aS-mgo"/>
+                                                    <constraint firstAttribute="height" constant="87" id="Y3g-aR-zSJ"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="87" id="gLF-Yz-9Qd"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="nAD-oC-3Rq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                                <state key="normal" title="Girl">
+                                                    <color key="titleColor" white="0.37381564249999999" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="girlButtonPress:" destination="VNY-J0-9aT" eventType="touchUpInside" id="ji6-Kv-gY9"/>
+                                                    <segue destination="UWD-Dy-P5b" kind="show" identifier="girlSegue" id="6lh-dF-BzR"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="qEI-Nd-Q1D" firstAttribute="centerX" secondItem="1R6-NB-EbU" secondAttribute="centerX" id="1UV-g9-fiH"/>
-                                    <constraint firstItem="qEI-Nd-Q1D" firstAttribute="centerY" secondItem="1R6-NB-EbU" secondAttribute="centerY" id="lpt-i7-b2K"/>
+                                    <constraint firstItem="DNq-Bf-7tl" firstAttribute="centerY" secondItem="1R6-NB-EbU" secondAttribute="centerY" id="mVr-5y-hP7"/>
+                                    <constraint firstItem="DNq-Bf-7tl" firstAttribute="centerX" secondItem="1R6-NB-EbU" secondAttribute="centerX" id="owy-3p-h8K"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -114,7 +103,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="boyButton" destination="oYc-Ek-GB0" id="Q9t-pI-eXd"/>
-                        <outlet property="dateFieldPicker" destination="2Pb-p9-oAL" id="fmD-UF-PFJ"/>
                         <outlet property="girlButton" destination="Fgu-e9-gfh" id="zXk-CA-cEI"/>
                     </connections>
                 </viewController>
@@ -133,11 +121,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUK-OQ-xHL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="sYK-rf-Akc">
-                                        <rect key="frame" x="40" y="262" width="295.5" height="143"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="7lb-1O-9Gc">
+                                        <rect key="frame" x="40" y="219.5" width="295.5" height="228.5"/>
                                         <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Filter Popular Names By Year" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qk7-oi-NCf">
+                                                <rect key="frame" x="16" y="0.0" width="263" height="34.5"/>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34.5" id="FOI-LC-wyd"/>
+                                                    <constraint firstAttribute="width" constant="263" id="wpj-im-sl9"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="EoM-NG-d6S">
-                                                <rect key="frame" x="0.0" y="0.0" width="295.5" height="35"/>
+                                                <rect key="frame" x="0.0" y="70.5" width="295.5" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNI-Zg-Cny">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
@@ -163,7 +162,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8F-VE-8Ab" userLabel="boyGenerate">
-                                                <rect key="frame" x="94" y="56" width="107" height="87"/>
+                                                <rect key="frame" x="94" y="141.5" width="107" height="87"/>
                                                 <color key="backgroundColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="nlW-uz-mSw"/>
@@ -182,8 +181,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.53725490200000003" green="0.81176470590000005" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="sYK-rf-Akc" firstAttribute="centerX" secondItem="BUK-OQ-xHL" secondAttribute="centerX" id="1We-tj-yQi"/>
-                                    <constraint firstItem="sYK-rf-Akc" firstAttribute="centerY" secondItem="BUK-OQ-xHL" secondAttribute="centerY" id="kxX-lo-WAI"/>
+                                    <constraint firstItem="7lb-1O-9Gc" firstAttribute="centerY" secondItem="BUK-OQ-xHL" secondAttribute="centerY" id="I4L-VI-8O7"/>
+                                    <constraint firstItem="7lb-1O-9Gc" firstAttribute="centerX" secondItem="BUK-OQ-xHL" secondAttribute="centerX" id="Xcu-1Q-ay3"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -209,6 +208,7 @@
                         <outlet property="boyAddStyling" destination="1JH-eB-f6J" id="yqC-mF-nda"/>
                         <outlet property="boyGenerate" destination="O8F-VE-8Ab" id="UQB-HL-lfU"/>
                         <outlet property="boyScreenLabel" destination="XNI-Zg-Cny" id="4MF-5Y-IFd"/>
+                        <outlet property="boyYearPicker" destination="qk7-oi-NCf" id="LRv-FH-hiP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dce-Gi-lVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -226,11 +226,22 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="baj-Fg-9HD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="s6o-Wu-6pF">
-                                        <rect key="frame" x="40" y="262" width="295.5" height="143"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1F2-Sq-6Nn">
+                                        <rect key="frame" x="40" y="215.5" width="295.5" height="236.5"/>
                                         <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Filter Popular Names By Year" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52U-gl-rTi">
+                                                <rect key="frame" x="16" y="0.0" width="263" height="34.5"/>
+                                                <color key="backgroundColor" red="0.98823529409999999" green="0.98431372549999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34.5" id="baG-eL-trb"/>
+                                                    <constraint firstAttribute="width" constant="263" id="i0z-L1-rPn"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="-25" translatesAutoresizingMaskIntoConstraints="NO" id="Ok1-lg-Ooc">
-                                                <rect key="frame" x="0.0" y="0.0" width="295.5" height="35"/>
+                                                <rect key="frame" x="0.0" y="74.5" width="295.5" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M42-dZ-i7G">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
@@ -256,7 +267,7 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnE-O3-0wC">
-                                                <rect key="frame" x="94" y="56" width="107" height="87"/>
+                                                <rect key="frame" x="94" y="149.5" width="107" height="87"/>
                                                 <color key="backgroundColor" white="0.75092230900000001" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="62k-mj-b6D"/>
@@ -275,8 +286,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.71372549019999998" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="s6o-Wu-6pF" firstAttribute="centerX" secondItem="baj-Fg-9HD" secondAttribute="centerX" id="SeU-gw-bAS"/>
-                                    <constraint firstItem="s6o-Wu-6pF" firstAttribute="centerY" secondItem="baj-Fg-9HD" secondAttribute="centerY" id="Ynr-Sf-uQs"/>
+                                    <constraint firstItem="1F2-Sq-6Nn" firstAttribute="centerX" secondItem="baj-Fg-9HD" secondAttribute="centerX" id="e8T-gz-096"/>
+                                    <constraint firstItem="1F2-Sq-6Nn" firstAttribute="centerY" secondItem="baj-Fg-9HD" secondAttribute="centerY" id="yTp-hG-hgg"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -305,6 +316,7 @@
                         <outlet property="girlAddStyling" destination="drH-UU-brW" id="PfD-RR-FEf"/>
                         <outlet property="girlGenerate" destination="gnE-O3-0wC" id="csl-0r-O1O"/>
                         <outlet property="girlNameLabel" destination="M42-dZ-i7G" id="TZi-F4-K4j"/>
+                        <outlet property="girlYearPicker" destination="52U-gl-rTi" id="zzk-H8-ZLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c6q-Gn-p1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
