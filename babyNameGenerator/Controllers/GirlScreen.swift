@@ -13,7 +13,9 @@ import CoreData
 class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var itemArray = [Name]()
-    var listOfYears = ["1900", "1901", "1902"]
+    var listOfYears = ["1887", "1888", "1889"]
+    
+    var currentYearSelection = ""
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -87,14 +89,25 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         girlAddStyling.isSelected = false
         girlAddStyling.isHidden = false
         
-        if currentElement < girlNameList.count {
-            girlNameLabel.text = girlNameList[currentElement]
-            
-            currentElement += 1
-            
-        } else {
-            girlNameLabel.text = "Sorry Out of Names"
+        var girlNameArray = [""]
+        
+        if girlYearPicker.text == "1887" {
+            girlNameArray = girl1887
+        }else if girlYearPicker.text == "1888" {
+            girlNameArray = girl1888
+        }else if girlYearPicker.text == "1889" {
+            girlNameArray = girl1889
         }
+        
+        nameListGenerator(fileName: girlNameArray)
+//        if currentElement < girl1888.count {
+//            girlNameLabel.text = girl1888[currentElement]
+//
+//            currentElement += 1
+//
+//        } else {
+//            girlNameLabel.text = "Sorry Out of Names"
+//        }
         
     }
 //    MARK: - Date Picker
@@ -168,4 +181,19 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 
     }
     
+    func nameListGenerator(fileName: [String]) {
+        
+        if currentElement < fileName.count {
+            girlNameLabel.text = fileName[currentElement]
+            
+            currentElement += 1
+            
+        } else {
+            girlNameLabel.text = "Sorry Out of Names"
+        }
+        
+    }
+    
+    
 }
+

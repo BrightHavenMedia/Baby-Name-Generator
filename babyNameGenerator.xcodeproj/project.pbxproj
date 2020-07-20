@@ -20,6 +20,10 @@
 		C78A2A022478762E00B8E05E /* babyNameGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C78A2A002478762E00B8E05E /* babyNameGenerator.xcdatamodeld */; };
 		C78A2A0624787C5600B8E05E /* FavoriteNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78A2A0524787C5600B8E05E /* FavoriteNames.swift */; };
 		C7DA6FD51FB15DC600DB3D6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DA6FD41FB15DC600DB3D6C /* Main.storyboard */; };
+		C7DAA2EE24C6322A0093A28D /* 1881.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DAA2ED24C6322A0093A28D /* 1881.swift */; };
+		C7DAA2F024C632400093A28D /* girl1887.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DAA2EF24C632400093A28D /* girl1887.swift */; };
+		C7DAA2F224C632550093A28D /* girl1888.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DAA2F124C632550093A28D /* girl1888.swift */; };
+		C7DAA2F424C632640093A28D /* girl1889.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DAA2F324C632640093A28D /* girl1889.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		C78A2A012478762E00B8E05E /* babyNameGenerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = babyNameGenerator.xcdatamodel; sourceTree = "<group>"; };
 		C78A2A0524787C5600B8E05E /* FavoriteNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteNames.swift; sourceTree = "<group>"; };
 		C7DA6FD41FB15DC600DB3D6C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C7DAA2ED24C6322A0093A28D /* 1881.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1881.swift; sourceTree = "<group>"; };
+		C7DAA2EF24C632400093A28D /* girl1887.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = girl1887.swift; sourceTree = "<group>"; };
+		C7DAA2F124C632550093A28D /* girl1888.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = girl1888.swift; sourceTree = "<group>"; };
+		C7DAA2F324C632640093A28D /* girl1889.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = girl1889.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				C756C4311F8430E100AE87A5 /* babyNameGenerator */,
+				C7DAA2EC24C631E70093A28D /* Girl Name Files */,
+				C7DAA2EB24C631CC0093A28D /* Boy Name Files */,
 				C756C4461F8430E100AE87A5 /* babyNameGeneratorTests */,
 				C756C4511F8430E100AE87A5 /* babyNameGeneratorUITests */,
 				C756C4301F8430E100AE87A5 /* Products */,
@@ -146,8 +156,6 @@
 				C756C4321F8430E100AE87A5 /* AppDelegate.swift */,
 				C74AFFB624AE867500DCC2EA /* Data Model */,
 				C74AFFB524AE864A00DCC2EA /* Controllers */,
-				C74DF46A1F96A3310008CBF6 /* girlNameList.swift */,
-				C74DF4681F96A31D0008CBF6 /* boyNameList.swift */,
 				C7DA6FD41FB15DC600DB3D6C /* Main.storyboard */,
 				C756C43B1F8430E100AE87A5 /* LaunchScreen.storyboard */,
 				C756C4391F8430E100AE87A5 /* Assets.xcassets */,
@@ -172,6 +180,26 @@
 				C756C4541F8430E100AE87A5 /* Info.plist */,
 			);
 			path = babyNameGeneratorUITests;
+			sourceTree = "<group>";
+		};
+		C7DAA2EB24C631CC0093A28D /* Boy Name Files */ = {
+			isa = PBXGroup;
+			children = (
+				C74DF4681F96A31D0008CBF6 /* boyNameList.swift */,
+				C7DAA2ED24C6322A0093A28D /* 1881.swift */,
+			);
+			path = "Boy Name Files";
+			sourceTree = "<group>";
+		};
+		C7DAA2EC24C631E70093A28D /* Girl Name Files */ = {
+			isa = PBXGroup;
+			children = (
+				C74DF46A1F96A3310008CBF6 /* girlNameList.swift */,
+				C7DAA2EF24C632400093A28D /* girl1887.swift */,
+				C7DAA2F124C632550093A28D /* girl1888.swift */,
+				C7DAA2F324C632640093A28D /* girl1889.swift */,
+			);
+			path = "Girl Name Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,8 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DAA2F224C632550093A28D /* girl1888.swift in Sources */,
 				C730B6241F8885EA007A298E /* BoyScreen.swift in Sources */,
 				C730B6261F888672007A298E /* GirlScreen.swift in Sources */,
+				C7DAA2EE24C6322A0093A28D /* 1881.swift in Sources */,
+				C7DAA2F024C632400093A28D /* girl1887.swift in Sources */,
+				C7DAA2F424C632640093A28D /* girl1889.swift in Sources */,
 				C78A2A0624787C5600B8E05E /* FavoriteNames.swift in Sources */,
 				C756C4351F8430E100AE87A5 /* StartScreen.swift in Sources */,
 				C78A2A022478762E00B8E05E /* babyNameGenerator.xcdatamodeld in Sources */,
