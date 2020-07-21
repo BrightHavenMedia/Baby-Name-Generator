@@ -129,6 +129,8 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         girlYearPicker.text = listOfYears[row]
         girlYearPicker.textColor = UIColor.black
         girlYearPicker.font = UIFont.boldSystemFont(ofSize: 18)
+        girlNameLabel.text = ""
+
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -147,6 +149,7 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         doneToolbar.sizeToFit()
         
         girlYearPicker.inputAccessoryView = doneToolbar
+
         
     }
     
@@ -183,17 +186,32 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     func nameListGenerator(fileName: [String]) {
         
-        if currentElement < fileName.count {
-            girlNameLabel.text = fileName[currentElement]
+        
+        
+        for _ in fileName {
+            
+            girlNameLabel.text = fileName.randomElement()
             
             currentElement += 1
             
-        } else {
-            girlNameLabel.text = "Sorry Out of Names"
         }
         
+        
+
+//        if currentElement < fileName.count {
+//
+//            girlNameLabel.text = fileName.randomElement()
+//
+//            currentElement += 1
+//
+//        }
+
+//        } else {
+//            girlNameLabel.text = "Sorry Out of Names"
+//
+//        }
+        
     }
-    
     
 }
 

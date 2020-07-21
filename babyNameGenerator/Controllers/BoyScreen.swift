@@ -115,6 +115,7 @@ class BoyScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
         boyYearPicker.text = listOfYears[row]
         boyYearPicker.textColor = UIColor.black
         boyYearPicker.font = UIFont.boldSystemFont(ofSize: 18)
+        boyScreenLabel.text = ""
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
