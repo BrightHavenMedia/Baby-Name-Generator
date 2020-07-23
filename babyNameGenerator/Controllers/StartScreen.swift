@@ -18,12 +18,12 @@ class StartScreen: UIViewController {
     
     
     @IBAction func boyButtonPress(_ sender: Any) {
-        boyNameList.shuffle()
+        
         
     }
     
     @IBAction func girlButtonPress(_ sender: Any) {
-        girlNameList.shuffle()
+        
     }
     @IBOutlet weak var boyButton: UIButton!
     @IBOutlet weak var girlButton: UIButton!
