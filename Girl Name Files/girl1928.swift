@@ -8,7 +8,7 @@
 
 import Foundation
 
-var girl1928 ["Mary",
+var girl1928 = ["Mary",
 "Betty",
 "Dorothy",
 "Helen",
