@@ -19,6 +19,7 @@ class FavoriteNames: UITableViewController {
     
     override func viewDidLoad() {
         loadItems()
+        self.tableView.backgroundColor = UIColor(red: 252/255.0, green: 251/255.0, blue: 227/255.0, alpha: 1.0)
     }
     
         
@@ -127,41 +128,7 @@ class FavoriteNames: UITableViewController {
     }
     
 }
-//MARK: - Search Bar
-extension FavoriteNames: UISearchBarDelegate {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        let request: NSFetchRequest<Name> = Name.fetchRequest()
-        
-        request.predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-        
-        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-        
-        loadItems(with: request)
-        
-        tableView.reloadData()
-        
-      }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.count == 0 {
-            loadItems()
-    
-            DispatchQueue.main.async {
-                
-                searchBar.resignFirstResponder()
-                
-            }
-        }
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-    }
-    
-    
-}
+
 
 
 

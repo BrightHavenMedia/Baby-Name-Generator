@@ -214,6 +214,8 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         }else if girlYearPicker.text == "1940" {
             girlNameArray = girl1940
         }else if girlYearPicker.text == "1941" {
+            girlNameArray = girl1941
+        }else if girlYearPicker.text == "1942" {
             girlNameArray = girl1942
         }else if girlYearPicker.text == "1943" {
             girlNameArray = girl1943
@@ -272,6 +274,8 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         }else if girlYearPicker.text == "1970" {
             girlNameArray = girl1970
         }else if girlYearPicker.text == "1971" {
+            girlNameArray = girl1971
+        }else if girlYearPicker.text == "1972" {
             girlNameArray = girl1972
         }else if girlYearPicker.text == "1973" {
             girlNameArray = girl1973
