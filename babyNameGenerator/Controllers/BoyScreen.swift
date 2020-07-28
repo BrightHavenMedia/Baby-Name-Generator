@@ -51,6 +51,7 @@ class BoyScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     boyGenerate.layer.cornerRadius = 20
     boyGenerate.clipsToBounds = true
     
+    
    }
 // MARK: - Favorite Button and Favorite List
     
@@ -85,290 +86,8 @@ class BoyScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
         boyAddStyling.isSelected = false
         boyAddStyling.isHidden = false
         
-        var boyNameArray = [""]
+        loadNameFile()
         
-       if boyYearPicker.text == "1880" {
-            boyNameArray = boy1880
-        }else if boyYearPicker.text == "1881" {
-            boyNameArray = boy1881
-        }else if boyYearPicker.text == "1882" {
-            boyNameArray = boy1882
-        }else if boyYearPicker.text == "1883" {
-            boyNameArray = boy1883
-        }else if boyYearPicker.text == "1884" {
-            boyNameArray = boy1884
-        }else if boyYearPicker.text == "1885" {
-            boyNameArray = boy1885
-        }else if boyYearPicker.text == "1886" {
-            boyNameArray = boy1886
-        }else if boyYearPicker.text == "1887" {
-            boyNameArray = boy1887
-        }else if boyYearPicker.text == "1888" {
-            boyNameArray = boy1888
-        }else if boyYearPicker.text == "1889" {
-            boyNameArray = boy1889
-        }else if boyYearPicker.text == "1890" {
-            boyNameArray = boy1890
-        }else if boyYearPicker.text == "1891" {
-            boyNameArray = boy1891
-        }else if boyYearPicker.text == "1892" {
-            boyNameArray = boy1892
-        }else if boyYearPicker.text == "1893" {
-            boyNameArray = boy1893
-        }else if boyYearPicker.text == "1894" {
-            boyNameArray = boy1894
-        }else if boyYearPicker.text == "1895" {
-            boyNameArray = boy1895
-        }else if boyYearPicker.text == "1896" {
-            boyNameArray = boy1896
-        }else if boyYearPicker.text == "1897" {
-            boyNameArray = boy1897
-        }else if boyYearPicker.text == "1898" {
-            boyNameArray = boy1898
-        }else if boyYearPicker.text == "1899" {
-            boyNameArray = boy1899
-        }else if boyYearPicker.text == "1900" {
-            boyNameArray = boy1900
-        }else if boyYearPicker.text == "1901" {
-            boyNameArray = boy1901
-        }else if boyYearPicker.text == "1902" {
-            boyNameArray = boy1902
-        }else if boyYearPicker.text == "1903" {
-            boyNameArray = boy1903
-        }else if boyYearPicker.text == "1904" {
-            boyNameArray = boy1904
-        }else if boyYearPicker.text == "1905" {
-            boyNameArray = boy1905
-        }else if boyYearPicker.text == "1906" {
-            boyNameArray = boy1906
-        }else if boyYearPicker.text == "1907" {
-            boyNameArray = boy1907
-        }else if boyYearPicker.text == "1908" {
-            boyNameArray = boy1908
-        }else if boyYearPicker.text == "1909" {
-            boyNameArray = boy1909
-        }else if boyYearPicker.text == "1910" {
-            boyNameArray = boy1910
-        }else if boyYearPicker.text == "1911" {
-            boyNameArray = boy1911
-        }else if boyYearPicker.text == "1912" {
-            boyNameArray = boy1912
-        }else if boyYearPicker.text == "1913" {
-            boyNameArray = boy1913
-        }else if boyYearPicker.text == "1914" {
-            boyNameArray = boy1914
-        }else if boyYearPicker.text == "1915" {
-            boyNameArray = boy1915
-        }else if boyYearPicker.text == "1916" {
-            boyNameArray = boy1916
-        }else if boyYearPicker.text == "1917" {
-            boyNameArray = boy1917
-        }else if boyYearPicker.text == "1918" {
-            boyNameArray = boy1918
-        }else if boyYearPicker.text == "1919" {
-            boyNameArray = boy1919
-        }else if boyYearPicker.text == "1920" {
-            boyNameArray = boy1920
-        }else if boyYearPicker.text == "1921" {
-            boyNameArray = boy1921
-        }else if boyYearPicker.text == "1922" {
-            boyNameArray = boy1922
-        }else if boyYearPicker.text == "1923" {
-            boyNameArray = boy1923
-        }else if boyYearPicker.text == "1924" {
-            boyNameArray = boy1924
-        }else if boyYearPicker.text == "1925" {
-            boyNameArray = boy1925
-        }else if boyYearPicker.text == "1926" {
-            boyNameArray = boy1926
-        }else if boyYearPicker.text == "1927" {
-            boyNameArray = boy1927
-        }else if boyYearPicker.text == "1928" {
-            boyNameArray = boy1928
-        }else if boyYearPicker.text == "1929" {
-            boyNameArray = boy1929
-        }else if boyYearPicker.text == "1930" {
-            boyNameArray = boy1930
-        }else if boyYearPicker.text == "1931" {
-            boyNameArray = boy1931
-        }else if boyYearPicker.text == "1932" {
-            boyNameArray = boy1932
-        }else if boyYearPicker.text == "1933" {
-            boyNameArray = boy1933
-        }else if boyYearPicker.text == "1934" {
-            boyNameArray = boy1934
-        }else if boyYearPicker.text == "1935" {
-            boyNameArray = boy1935
-        }else if boyYearPicker.text == "1936" {
-            boyNameArray = boy1936
-        }else if boyYearPicker.text == "1937" {
-            boyNameArray = boy1937
-        }else if boyYearPicker.text == "1938" {
-            boyNameArray = boy1938
-        }else if boyYearPicker.text == "1939" {
-            boyNameArray = boy1939
-        }else if boyYearPicker.text == "1940" {
-            boyNameArray = boy1940
-        }else if boyYearPicker.text == "1941" {
-            boyNameArray = boy1941
-        }else if boyYearPicker.text == "1942" {
-            boyNameArray = boy1942
-        }else if boyYearPicker.text == "1943" {
-            boyNameArray = boy1943
-        }else if boyYearPicker.text == "1944" {
-            boyNameArray = boy1944
-        }else if boyYearPicker.text == "1945" {
-            boyNameArray = boy1945
-        }else if boyYearPicker.text == "1946" {
-            boyNameArray = boy1946
-        }else if boyYearPicker.text == "1947" {
-            boyNameArray = boy1947
-        }else if boyYearPicker.text == "1948" {
-            boyNameArray = boy1948
-        }else if boyYearPicker.text == "1949" {
-            boyNameArray = boy1949
-        }else if boyYearPicker.text == "1950" {
-            boyNameArray = boy1950
-        }else if boyYearPicker.text == "1951" {
-            boyNameArray = boy1951
-        }else if boyYearPicker.text == "1952" {
-            boyNameArray = boy1952
-        }else if boyYearPicker.text == "1953" {
-            boyNameArray = boy1953
-        }else if boyYearPicker.text == "1954" {
-            boyNameArray = boy1954
-        }else if boyYearPicker.text == "1955" {
-            boyNameArray = boy1955
-        }else if boyYearPicker.text == "1956" {
-            boyNameArray = boy1956
-        }else if boyYearPicker.text == "1957" {
-            boyNameArray = boy1957
-        }else if boyYearPicker.text == "1958" {
-            boyNameArray = boy1958
-        }else if boyYearPicker.text == "1959" {
-            boyNameArray = boy1959
-        }else if boyYearPicker.text == "1960" {
-            boyNameArray = boy1960
-        }else if boyYearPicker.text == "1961" {
-            boyNameArray = boy1961
-        }else if boyYearPicker.text == "1962" {
-            boyNameArray = boy1962
-        }else if boyYearPicker.text == "1963" {
-            boyNameArray = boy1963
-        }else if boyYearPicker.text == "1964" {
-            boyNameArray = boy1964
-        }else if boyYearPicker.text == "1965" {
-            boyNameArray = boy1965
-        }else if boyYearPicker.text == "1966" {
-            boyNameArray = boy1966
-        }else if boyYearPicker.text == "1967" {
-            boyNameArray = boy1967
-        }else if boyYearPicker.text == "1968" {
-            boyNameArray = boy1968
-        }else if boyYearPicker.text == "1969" {
-            boyNameArray = boy1969
-        }else if boyYearPicker.text == "1970" {
-            boyNameArray = boy1970
-        }else if boyYearPicker.text == "1971" {
-            boyNameArray = boy1971
-        }else if boyYearPicker.text == "1972" {
-            boyNameArray = boy1972
-        }else if boyYearPicker.text == "1973" {
-            boyNameArray = boy1973
-        }else if boyYearPicker.text == "1974" {
-            boyNameArray = boy1974
-        }else if boyYearPicker.text == "1975" {
-            boyNameArray = boy1975
-        }else if boyYearPicker.text == "1976" {
-            boyNameArray = boy1976
-        }else if boyYearPicker.text == "1977" {
-            boyNameArray = boy1977
-        }else if boyYearPicker.text == "1978" {
-            boyNameArray = boy1978
-        }else if boyYearPicker.text == "1979" {
-            boyNameArray = boy1979
-        }else if boyYearPicker.text == "1980" {
-            boyNameArray = boy1980
-        }else if boyYearPicker.text == "1981" {
-            boyNameArray = boy1981
-        }else if boyYearPicker.text == "1982" {
-            boyNameArray = boy1982
-        }else if boyYearPicker.text == "1983" {
-            boyNameArray = boy1983
-        }else if boyYearPicker.text == "1984" {
-            boyNameArray = boy1984
-        }else if boyYearPicker.text == "1985" {
-            boyNameArray = boy1985
-        }else if boyYearPicker.text == "1986" {
-            boyNameArray = boy1986
-        }else if boyYearPicker.text == "1987" {
-            boyNameArray = boy1987
-        }else if boyYearPicker.text == "1988" {
-            boyNameArray = boy1988
-        }else if boyYearPicker.text == "1989" {
-            boyNameArray = boy1989
-        }else if boyYearPicker.text == "1990" {
-            boyNameArray = boy1990
-        }else if boyYearPicker.text == "1991" {
-            boyNameArray = boy1991
-        }else if boyYearPicker.text == "1992" {
-            boyNameArray = boy1992
-        }else if boyYearPicker.text == "1993" {
-            boyNameArray = boy1993
-        }else if boyYearPicker.text == "1994" {
-            boyNameArray = boy1994
-        }else if boyYearPicker.text == "1995" {
-            boyNameArray = boy1995
-        }else if boyYearPicker.text == "1996" {
-            boyNameArray = boy1996
-        }else if boyYearPicker.text == "1997" {
-            boyNameArray = boy1997
-        }else if boyYearPicker.text == "1998" {
-            boyNameArray = boy1998
-        }else if boyYearPicker.text == "1999" {
-            boyNameArray = boy1999
-        }else if boyYearPicker.text == "2000" {
-            boyNameArray = boy2000
-        }else if boyYearPicker.text == "2001" {
-            boyNameArray = boy2001
-        }else if boyYearPicker.text == "2002" {
-            boyNameArray = boy2002
-        }else if boyYearPicker.text == "2003" {
-            boyNameArray = boy2003
-        }else if boyYearPicker.text == "2004" {
-            boyNameArray = boy2004
-        }else if boyYearPicker.text == "2005" {
-            boyNameArray = boy2005
-        }else if boyYearPicker.text == "2006" {
-            boyNameArray = boy2006
-        }else if boyYearPicker.text == "2007" {
-            boyNameArray = boy2007
-        }else if boyYearPicker.text == "2008" {
-            boyNameArray = boy2008
-        }else if boyYearPicker.text == "2009" {
-            boyNameArray = boy2009
-        }else if boyYearPicker.text == "2010" {
-            boyNameArray = boy2010
-        }else if boyYearPicker.text == "2011" {
-            boyNameArray = boy2011
-        }else if boyYearPicker.text == "2012" {
-            boyNameArray = boy2012
-        }else if boyYearPicker.text == "2013" {
-            boyNameArray = boy2013
-        }else if boyYearPicker.text == "2014" {
-            boyNameArray = boy2014
-        }else if boyYearPicker.text == "2015" {
-            boyNameArray = boy2015
-        }else if boyYearPicker.text == "2016" {
-            boyNameArray = boy2016
-        }else if boyYearPicker.text == "2017" {
-            boyNameArray = boy2017
-        }else if boyYearPicker.text == "2018" {
-            boyNameArray = boy2018
-        }
-
-        
-        nameListGenerator(fileName: boyNameArray)
     }
     
 //    MARK: - Date Picker
@@ -443,19 +162,24 @@ class BoyScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
 
     }
     
-    func nameListGenerator(fileName: [String]) {
-    
-    
-    
-    for _ in fileName {
-        
-        boyScreenLabel.text = fileName.randomElement()
-        
-        currentElement += 1
-        
+    func loadNameFile () {
+           
+           do {
+           let fileName = Bundle.main.url(forResource: boyYearPicker.text, withExtension: "txt")
+               let fileContents = try String(contentsOf: fileName!)
+           
+               let boyNameArray = fileContents.components(separatedBy: "\n")
+               
+               if currentElement < boyNameArray.count {
+                          boyScreenLabel.text = boyNameArray[currentElement]
+                          
+                          currentElement += 1
+                          }
+               
+           } catch let error {
+               print(error)
+           }
     }
-    
-}
 
 }
 

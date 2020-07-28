@@ -57,6 +57,7 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         girlNameLabel.clipsToBounds = true
         girlGenerate.layer.cornerRadius = 20
         girlGenerate.clipsToBounds = true
+        
     
     }
     
@@ -89,290 +90,7 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         girlAddStyling.isSelected = false
         girlAddStyling.isHidden = false
         
-        var girlNameArray = [""]
-        
-        if girlYearPicker.text == "1880" {
-            girlNameArray = girl1880
-        }else if girlYearPicker.text == "1881" {
-            girlNameArray = girl1881
-        }else if girlYearPicker.text == "1882" {
-            girlNameArray = girl1882
-        }else if girlYearPicker.text == "1883" {
-            girlNameArray = girl1883
-        }else if girlYearPicker.text == "1884" {
-            girlNameArray = girl1884
-        }else if girlYearPicker.text == "1885" {
-            girlNameArray = girl1885
-        }else if girlYearPicker.text == "1886" {
-            girlNameArray = girl1886
-        }else if girlYearPicker.text == "1887" {
-            girlNameArray = girl1887
-        }else if girlYearPicker.text == "1888" {
-            girlNameArray = girl1888
-        }else if girlYearPicker.text == "1889" {
-            girlNameArray = girl1889
-        }else if girlYearPicker.text == "1890" {
-            girlNameArray = girl1890
-        }else if girlYearPicker.text == "1891" {
-            girlNameArray = girl1891
-        }else if girlYearPicker.text == "1892" {
-            girlNameArray = girl1892
-        }else if girlYearPicker.text == "1893" {
-            girlNameArray = girl1893
-        }else if girlYearPicker.text == "1894" {
-            girlNameArray = girl1894
-        }else if girlYearPicker.text == "1895" {
-            girlNameArray = girl1896
-        }else if girlYearPicker.text == "1896" {
-            girlNameArray = girl1896
-        }else if girlYearPicker.text == "1897" {
-            girlNameArray = girl1897
-        }else if girlYearPicker.text == "1898" {
-            girlNameArray = girl1898
-        }else if girlYearPicker.text == "1899" {
-            girlNameArray = girl1899
-        }else if girlYearPicker.text == "1900" {
-            girlNameArray = girl1900
-        }else if girlYearPicker.text == "1901" {
-            girlNameArray = girl1901
-        }else if girlYearPicker.text == "1902" {
-            girlNameArray = girl1902
-        }else if girlYearPicker.text == "1903" {
-            girlNameArray = girl1903
-        }else if girlYearPicker.text == "1904" {
-            girlNameArray = girl1904
-        }else if girlYearPicker.text == "1905" {
-            girlNameArray = girl1905
-        }else if girlYearPicker.text == "1906" {
-            girlNameArray = girl1906
-        }else if girlYearPicker.text == "1907" {
-            girlNameArray = girl1907
-        }else if girlYearPicker.text == "1908" {
-            girlNameArray = girl1908
-        }else if girlYearPicker.text == "1909" {
-            girlNameArray = girl1909
-        }else if girlYearPicker.text == "1910" {
-            girlNameArray = girl1910
-        }else if girlYearPicker.text == "1911" {
-            girlNameArray = girl1911
-        }else if girlYearPicker.text == "1912" {
-            girlNameArray = girl1912
-        }else if girlYearPicker.text == "1913" {
-            girlNameArray = girl1913
-        }else if girlYearPicker.text == "1914" {
-            girlNameArray = girl1914
-        }else if girlYearPicker.text == "1915" {
-            girlNameArray = girl1915
-        }else if girlYearPicker.text == "1916" {
-            girlNameArray = girl1916
-        }else if girlYearPicker.text == "1917" {
-            girlNameArray = girl1917
-        }else if girlYearPicker.text == "1918" {
-            girlNameArray = girl1918
-        }else if girlYearPicker.text == "1919" {
-            girlNameArray = girl1919
-        }else if girlYearPicker.text == "1920" {
-            girlNameArray = girl1920
-        }else if girlYearPicker.text == "1921" {
-            girlNameArray = girl1921
-        }else if girlYearPicker.text == "1922" {
-            girlNameArray = girl1922
-        }else if girlYearPicker.text == "1923" {
-            girlNameArray = girl1923
-        }else if girlYearPicker.text == "1924" {
-            girlNameArray = girl1924
-        }else if girlYearPicker.text == "1925" {
-            girlNameArray = girl1925
-        }else if girlYearPicker.text == "1926" {
-            girlNameArray = girl1926
-        }else if girlYearPicker.text == "1927" {
-            girlNameArray = girl1927
-        }else if girlYearPicker.text == "1928" {
-            girlNameArray = girl1928
-        }else if girlYearPicker.text == "1929" {
-            girlNameArray = girl1929
-        }else if girlYearPicker.text == "1930" {
-            girlNameArray = girl1930
-        }else if girlYearPicker.text == "1931" {
-            girlNameArray = girl1931
-        }else if girlYearPicker.text == "1932" {
-            girlNameArray = girl1932
-        }else if girlYearPicker.text == "1933" {
-            girlNameArray = girl1933
-        }else if girlYearPicker.text == "1934" {
-            girlNameArray = girl1934
-        }else if girlYearPicker.text == "1935" {
-            girlNameArray = girl1935
-        }else if girlYearPicker.text == "1936" {
-            girlNameArray = girl1936
-        }else if girlYearPicker.text == "1937" {
-            girlNameArray = girl1937
-        }else if girlYearPicker.text == "1938" {
-            girlNameArray = girl1938
-        }else if girlYearPicker.text == "1939" {
-            girlNameArray = girl1939
-        }else if girlYearPicker.text == "1940" {
-            girlNameArray = girl1940
-        }else if girlYearPicker.text == "1941" {
-            girlNameArray = girl1941
-        }else if girlYearPicker.text == "1942" {
-            girlNameArray = girl1942
-        }else if girlYearPicker.text == "1943" {
-            girlNameArray = girl1943
-        }else if girlYearPicker.text == "1944" {
-            girlNameArray = girl1944
-        }else if girlYearPicker.text == "1945" {
-            girlNameArray = girl1945
-        }else if girlYearPicker.text == "1946" {
-            girlNameArray = girl1946
-        }else if girlYearPicker.text == "1947" {
-            girlNameArray = girl1947
-        }else if girlYearPicker.text == "1948" {
-            girlNameArray = girl1948
-        }else if girlYearPicker.text == "1949" {
-            girlNameArray = girl1949
-        }else if girlYearPicker.text == "1950" {
-            girlNameArray = girl1950
-        }else if girlYearPicker.text == "1951" {
-            girlNameArray = girl1951
-        }else if girlYearPicker.text == "1952" {
-            girlNameArray = girl1952
-        }else if girlYearPicker.text == "1953" {
-            girlNameArray = girl1953
-        }else if girlYearPicker.text == "1954" {
-            girlNameArray = girl1954
-        }else if girlYearPicker.text == "1955" {
-            girlNameArray = girl1955
-        }else if girlYearPicker.text == "1956" {
-            girlNameArray = girl1956
-        }else if girlYearPicker.text == "1957" {
-            girlNameArray = girl1957
-        }else if girlYearPicker.text == "1958" {
-            girlNameArray = girl1958
-        }else if girlYearPicker.text == "1959" {
-            girlNameArray = girl1959
-        }else if girlYearPicker.text == "1960" {
-            girlNameArray = girl1960
-        }else if girlYearPicker.text == "1961" {
-            girlNameArray = girl1961
-        }else if girlYearPicker.text == "1962" {
-            girlNameArray = girl1962
-        }else if girlYearPicker.text == "1963" {
-            girlNameArray = girl1963
-        }else if girlYearPicker.text == "1964" {
-            girlNameArray = girl1964
-        }else if girlYearPicker.text == "1965" {
-            girlNameArray = girl1965
-        }else if girlYearPicker.text == "1966" {
-            girlNameArray = girl1966
-        }else if girlYearPicker.text == "1967" {
-            girlNameArray = girl1967
-        }else if girlYearPicker.text == "1968" {
-            girlNameArray = girl1968
-        }else if girlYearPicker.text == "1969" {
-            girlNameArray = girl1969
-        }else if girlYearPicker.text == "1970" {
-            girlNameArray = girl1970
-        }else if girlYearPicker.text == "1971" {
-            girlNameArray = girl1971
-        }else if girlYearPicker.text == "1972" {
-            girlNameArray = girl1972
-        }else if girlYearPicker.text == "1973" {
-            girlNameArray = girl1973
-        }else if girlYearPicker.text == "1974" {
-            girlNameArray = girl1974
-        }else if girlYearPicker.text == "1975" {
-            girlNameArray = girl1975
-        }else if girlYearPicker.text == "1976" {
-            girlNameArray = girl1976
-        }else if girlYearPicker.text == "1977" {
-            girlNameArray = girl1977
-        }else if girlYearPicker.text == "1978" {
-            girlNameArray = girl1978
-        }else if girlYearPicker.text == "1979" {
-            girlNameArray = girl1979
-        }else if girlYearPicker.text == "1980" {
-            girlNameArray = girl1980
-        }else if girlYearPicker.text == "1981" {
-            girlNameArray = girl1981
-        }else if girlYearPicker.text == "1982" {
-            girlNameArray = girl1982
-        }else if girlYearPicker.text == "1983" {
-            girlNameArray = girl1983
-        }else if girlYearPicker.text == "1984" {
-            girlNameArray = girl1984
-        }else if girlYearPicker.text == "1985" {
-            girlNameArray = girl1985
-        }else if girlYearPicker.text == "1986" {
-            girlNameArray = girl1986
-        }else if girlYearPicker.text == "1987" {
-            girlNameArray = girl1987
-        }else if girlYearPicker.text == "1988" {
-            girlNameArray = girl1988
-        }else if girlYearPicker.text == "1989" {
-            girlNameArray = girl1989
-        }else if girlYearPicker.text == "1990" {
-            girlNameArray = girl1990
-        }else if girlYearPicker.text == "1991" {
-            girlNameArray = girl1991
-        }else if girlYearPicker.text == "1992" {
-            girlNameArray = girl1992
-        }else if girlYearPicker.text == "1993" {
-            girlNameArray = girl1993
-        }else if girlYearPicker.text == "1994" {
-            girlNameArray = girl1994
-        }else if girlYearPicker.text == "1995" {
-            girlNameArray = girl1995
-        }else if girlYearPicker.text == "1996" {
-            girlNameArray = girl1996
-        }else if girlYearPicker.text == "1997" {
-            girlNameArray = girl1997
-        }else if girlYearPicker.text == "1998" {
-            girlNameArray = girl1998
-        }else if girlYearPicker.text == "1999" {
-            girlNameArray = girl1999
-        }else if girlYearPicker.text == "2000" {
-            girlNameArray = girl2000
-        }else if girlYearPicker.text == "2001" {
-            girlNameArray = girl2001
-        }else if girlYearPicker.text == "2002" {
-            girlNameArray = girl2002
-        }else if girlYearPicker.text == "2003" {
-            girlNameArray = girl2003
-        }else if girlYearPicker.text == "2004" {
-            girlNameArray = girl2004
-        }else if girlYearPicker.text == "2005" {
-            girlNameArray = girl2005
-        }else if girlYearPicker.text == "2006" {
-            girlNameArray = girl2006
-        }else if girlYearPicker.text == "2007" {
-            girlNameArray = girl2007
-        }else if girlYearPicker.text == "2008" {
-            girlNameArray = girl2008
-        }else if girlYearPicker.text == "2009" {
-            girlNameArray = girl2009
-        }else if girlYearPicker.text == "2010" {
-            girlNameArray = girl2010
-        }else if girlYearPicker.text == "2011" {
-            girlNameArray = girl2011
-        }else if girlYearPicker.text == "2012" {
-            girlNameArray = girl2012
-        }else if girlYearPicker.text == "2013" {
-            girlNameArray = girl2013
-        }else if girlYearPicker.text == "2014" {
-            girlNameArray = girl2014
-        }else if girlYearPicker.text == "2015" {
-            girlNameArray = girl2015
-        }else if girlYearPicker.text == "2016" {
-            girlNameArray = girl2016
-        }else if girlYearPicker.text == "2017" {
-            girlNameArray = girl2017
-        }else if girlYearPicker.text == "2018" {
-            girlNameArray = girl2018
-        }
-        
-        nameListGenerator(fileName: girlNameArray)
-
+        loadNameFile()
         
     }
 //    MARK: - Date Picker
@@ -449,33 +167,31 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 
     }
     
-    func nameListGenerator(fileName: [String]) {
+     func loadNameFile () {
         
         
-        
-        for _ in fileName {
+           
+        do {
             
-            girlNameLabel.text = fileName.randomElement()
+            let fileName = Bundle.main.url(forResource: girlYearPicker.text, withExtension: "txt")
+            let fileContents = try String(contentsOf: fileName!)
             
-            currentElement += 1
+            }
+           
+            let girlNameArray = fileContents.components(separatedBy: "\n")
+
+               
+            if currentElement < girlNameArray.count {
+                
+                girlNameLabel.text = girlNameArray[currentElement]
+                currentElement += 1
+                
+            }
+            
+        } catch let error {
+            print(error)
             
         }
-        
-        
-
-//        if currentElement < fileName.count {
-//
-//            girlNameLabel.text = fileName.randomElement()
-//
-//            currentElement += 1
-//
-//        }
-
-//        } else {
-//            girlNameLabel.text = "Sorry Out of Names"
-//
-//        }
-        
     }
     
 }
