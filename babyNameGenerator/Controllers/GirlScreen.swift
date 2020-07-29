@@ -31,7 +31,7 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
     @IBOutlet weak var girlAddStyling: UIButton!
     
-// MARK: - View Did Load and Label Formatting
+    // MARK: - View Did Load and Label Formatting
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,25 +46,25 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         view.addGestureRecognizer(tapGestureRecognizer)
         
         addDoneButtonOnKeyboard()
-    
+        
         girlNameLabel.isEnabled = false
         girlAddStyling.isHidden = true
         
         girlYearPicker.layer.cornerRadius = 10
         girlYearPicker.clipsToBounds = true
-            
+        
         girlNameLabel.layer.cornerRadius = 10
         girlNameLabel.clipsToBounds = true
         girlGenerate.layer.cornerRadius = 20
         girlGenerate.clipsToBounds = true
         
-    
+        
     }
     
-// MARK: - Favorite Button and Favorite List
+    // MARK: - Favorite Button and Favorite List
     
     @IBAction func girlAddFavorite(_ sender: UIButton) {
-
+        
         sender.isSelected = false
         sender.isEnabled = true
         let newName = Name(context: self.context)
@@ -80,9 +80,9 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         saveItems()
     }
     
-// MARK: - Generate Names
+    // MARK: - Generate Names
     
-
+    
     @IBAction func girlGeneratePress(_ sender: Any) {
         
         girlNameLabel.isEnabled = true
@@ -93,7 +93,7 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         loadNameFile()
         
     }
-//    MARK: - Date Picker
+    //    MARK: - Date Picker
     @objc func dismissKeyboard() {
         
         view.endEditing(true)
@@ -113,7 +113,7 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         girlYearPicker.textColor = UIColor.black
         girlYearPicker.font = UIFont.boldSystemFont(ofSize: 18)
         girlNameLabel.text = ""
-
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -132,55 +132,52 @@ class GirlScreen: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         doneToolbar.sizeToFit()
         
         girlYearPicker.inputAccessoryView = doneToolbar
-
+        
         
     }
     
     @objc func doneButtonAction(){
         girlYearPicker.resignFirstResponder()
-    
+        
     }
-
-//    MARK: - Core Data
+    
+    //    MARK: - Core Data
     
     func saveItems() {
-            
+        
         do {
             try context.save()
-                
+            
         } catch {
             print("Error saving context \(error)")
-                
+            
         }
-
-    }
         
+    }
+    
     func loadItems() {
         let request: NSFetchRequest<Name> = Name.fetchRequest()
         
         do {
-        itemArray = try context.fetch(request)
+            itemArray = try context.fetch(request)
         } catch {
             print("Error fetching data from context \(error)")
             
         }
-
+        
     }
     
-     func loadNameFile () {
+    func loadNameFile () {
         
         
-           
         do {
             
-            let fileName = Bundle.main.url(forResource: girlYearPicker.text, withExtension: "txt")
+            let fileName = Bundle.main.url(forResource: "yob" + girlYearPicker.text!, withExtension: "txt")
             let fileContents = try String(contentsOf: fileName!)
             
-            }
-           
             let girlNameArray = fileContents.components(separatedBy: "\n")
-
-               
+            
+            
             if currentElement < girlNameArray.count {
                 
                 girlNameLabel.text = girlNameArray[currentElement]

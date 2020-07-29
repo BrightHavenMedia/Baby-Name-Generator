@@ -14,7 +14,7 @@ class StartScreen: UIViewController {
     var listOfYears = ["1880", "1881", "1882", "1883"]
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var itemArray = [Name]()
-
+    
     
     
     @IBAction func boyButtonPress(_ sender: Any) {
@@ -48,18 +48,18 @@ class StartScreen: UIViewController {
         
     }
     
-//    MARK: - CoreData Start Screen
+    //    MARK: - CoreData Start Screen
     
     func loadItems() {
         let request: NSFetchRequest<Name> = Name.fetchRequest()
         
         do {
-        itemArray = try context.fetch(request)
+            itemArray = try context.fetch(request)
         } catch {
             print("Error fetching data from context \(error)")
             
         }
-
+        
     }
     
 }

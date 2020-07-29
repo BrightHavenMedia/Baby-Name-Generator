@@ -14,16 +14,16 @@ class FavoriteNames: UITableViewController {
     
     var itemArray = [Name]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-   
+    
+    
     
     override func viewDidLoad() {
         loadItems()
         self.tableView.backgroundColor = UIColor(red: 252/255.0, green: 251/255.0, blue: 227/255.0, alpha: 1.0)
     }
     
-        
-//MARK: - TableView Delegate Methods
+    
+    //MARK: - TableView Delegate Methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return itemArray.count
@@ -56,10 +56,10 @@ class FavoriteNames: UITableViewController {
             saveItemsTableSwipe()
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-    
+        
     }
     
-//MARK: - Add Name UIAlert
+    //MARK: - Add Name UIAlert
     
     @IBAction func addNameButton(_ sender: UIBarButtonItem) {
         
@@ -89,32 +89,32 @@ class FavoriteNames: UITableViewController {
         
     }
     
-//MARK: - Core Data Functions
-        
+    //MARK: - Core Data Functions
+    
     func saveItems() {
-            
+        
         do {
             try context.save()
-                
+            
         } catch {
             print("Error saving context \(error)")
-                
+            
         }
         self.tableView.reloadData()
     }
     
     func saveItemsTableSwipe() {
-            
+        
         do {
             try context.save()
-                
+            
         } catch {
             print("Error saving context \(error)")
-                
+            
         }
-
-    }
         
+    }
+    
     func loadItems(with request: NSFetchRequest<Name> = Name.fetchRequest()) {
         let request: NSFetchRequest<Name> = Name.fetchRequest()
         
